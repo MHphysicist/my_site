@@ -1,0 +1,85 @@
+/*====================================
+           Services cards
+ ====================================*/
+#services-cards div div i {
+    font-size: 60px;
+    color: black;
+}
+
+#service-card-id {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    padding: 20;
+}
+
+#service-card-id hr {
+    width: 70%;
+    height: 2px;
+    margin: 0 none;
+    background-color: #f09b47;
+    font-size: 100px;
+    margin: 0 none;
+}
+
+/* hover event */
+#service-card-id:hover{
+    border-color: purple;
+}
+#service-card-id div:hover {
+    background-color: purple;
+}
+
+#service-card-id:hover h5 {
+    font-size: 150%;
+}
+#service-card-id:hover i {
+    color:#03fc84;
+    transform: rotate3d(0, 1, 0, 40deg);
+}
+
+#service-card-id:hover div {
+    color: white;
+}
+
+#service-card-id:hover hr {
+    width: 100%;
+    background-color: black;
+}
+
+#service-card-id div,
+#service-card-id i,
+#service-card-id h5,
+#service-card-id hr,
+#service-card-id {
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 350ms;
+    transition-duration: 350ms;
+}
+
+/*====================================
+           Request service button
+ ====================================*/
+#request-button {
+    background-color: rgba(247, 174, 102, 1);
+    color: black;
+    font-size: large;
+    border-color: rgba(247, 174, 102, 1);
+    border-radius: 0%;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10020;
+}
+
+/*====================================
+           Request service form
+ ====================================*/
+.input-field {
+    
+}
+
+#submit-request-button {
+    align-self: center;
+}

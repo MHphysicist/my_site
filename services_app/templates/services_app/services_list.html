@@ -1,0 +1,82 @@
+{% extends "blog_app/base.html" %}
+{% block body_block %}
+{% load static %}
+<!-- Special for the services app -->
+<link rel="stylesheet" href="{% static 'css/services_app.css' %}">
+
+<a href="{% url 'services:request_new' %}"  id="request-button" class="btn">Request a service</a>
+
+<div id="services-cards" class="card-columns">
+    <div id="service-card-id" class="card" data-aos="flip-right">
+        <div class="card-body text-center">
+            <i class='fas fa-code'></i>
+            <hr>
+            <h5 class="card-title">Web Development</h5>
+            <hr>
+            <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+    <div id="service-card-id" class="card" data-aos="flip-left">
+        <div class="card-body text-center">
+            <i class='far fa-file-word'></i>
+            <hr>
+            <h5 class="card-title">Word Processing</h5>
+            <hr>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </div>
+
+    <div id="service-card-id" class="card" data-aos="flip-right">
+        <div class="card-body text-center">
+            <i class='fas fa-chalkboard-teacher'></i>
+            <hr>
+            <h5 class="card-title">Teaching</h5>
+            <hr>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+        </div>
+    </div>
+
+    <div id="service-card-id" class="card" data-aos="flip-left">
+        <div class="card-body text-center">
+            <i class='fas fa-code'></i>
+            <hr>
+            <h5 class="card-title">Web Development</h5>
+            <hr>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+        </div>
+    </div>
+
+    <div id="service-card-id" class="card" data-aos="flip-right">
+        <div class="card-body text-center">
+            <i class='far fa-file-word'></i>
+            <hr>
+            <h5 class="card-title">Word Processing</h5>
+            <hr>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            </p>
+        </div>
+    </div>
+
+    <div id="service-card-id" class="card" data-aos="flip-left">
+        <div class="card-body text-center">
+            <i class='fas fa-chalkboard-teacher'></i>
+            <hr>
+            <h5 class="card-title">Teaching</h5>
+            <hr>
+            <p class="card-text">
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </div>
+</div>
+<br><br>
+{% endblock body_block %}

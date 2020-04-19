@@ -1,0 +1,37 @@
+{% extends "blog_app/base.html" %}
+{% block body_block %}
+
+<div class="jumbotron jumbo">
+  <h1> New service request</h1>
+      <form method="POST">
+
+          {% csrf_token %}
+
+          <div class="form-row" >
+
+            {% load widget_tweaks %}
+
+            <div class="form-group col-md-6">
+              {% render_field form.visitor_name class="form-control input-field" name="visitor_name" placeholder="Name/Company name" %}
+            </div>
+
+            <div class="form-group col-md-6">
+              {% render_field form.visitor_email class="form-control input-field" name="visitor_email" placeholder="Email" %}
+            </div>
+
+            <div class="form-group col-md-6">
+              {% render_field form.visitor_phone class="form-control input-field" name="visitor_phone" placeholder="Phone e.g +249991521259" %}
+            </div>
+
+            <div class="form-group col-md-6">
+              {% render_field form.service_type class="custom-select input-field" name="service_type" %}
+            </div>
+
+            <div class="form-group col-md-12">
+              {% render_field form.service_description type="textarea" class="form-control input-field" name="service_description" placeholder="Descripe yor service request as much as you can." %}
+            </div>
+          </div>  
+          <button type="submit" class="btn btn-primary btn-block">Submit request</button>          
+      </form>
+    </div>
+{% endblock body_block %}

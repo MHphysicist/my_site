@@ -1,0 +1,26 @@
+{% extends "blog_app/base.html" %}
+{% block body_block %}
+<div class="jumbotron container jumbo">
+  <div class="card text-center">
+    <div class="card-header">
+      {{ servicerequest.visitor_name }}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ servicerequest.service_type }} service</h5>
+      <p class="card-text">{{ servicerequest.service_description }}</p>
+      <hr>
+      <div class=" container jumbo row" style="margin: 0;">
+        <div class="col-6">
+          <a class="btn btn-dark btn-block" href="mailto:{{ servicerequest.visitor_email }}" style="color: white;"><i class="fas fa-envelope" style="font-size: 200%;"></i></a>
+        </div>
+      <div class="col-6">
+          <a class="btn btn-success btn-block" href="tel:{{ servicerequest.visitor_phone }}" ><i class="fa fa-phone" style="font-size: 200%;"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    {{ servicerequest.request_date }}
+  </div>
+</div>
+</div>
+{% endblock body_block %}<h1>this is the request details view</h1>

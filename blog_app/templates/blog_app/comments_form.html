@@ -1,0 +1,20 @@
+{% extends "blog_app/base.html" %}
+{% block body_block %}
+<div class="jumbotron jumbo">
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h1>New Comment</h1>
+
+    {% load widget_tweaks %}
+    <div class="form-group col-sm-12">
+      {% render_field form.author class="form-control input-field" name="author" placeholder="Your name" %}
+    </div>
+    <div class="form-group col-sm-12">
+        {% render_field form.text type="textarea" class="form-control input-field" name="text" placeholder="Write your comment here (Be positive)." %}
+    </div>
+    <div class="form-group col-sm-12">
+      <button type="submit" class="btn btn-primary btn-block">Post Comment</button>
+    </div>
+</form>
+</div>
+{% endblock body_block %}  

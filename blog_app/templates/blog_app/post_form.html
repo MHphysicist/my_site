@@ -1,0 +1,29 @@
+{% extends "blog_app/base.html" %}
+{% block body_block %}
+  <div class="jumbotron jumbo">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if not post.pk %}
+          <h1>New post</h1>
+        {% else %}
+          <h1>Update post</h1>
+        {% endif %}
+        
+            <div class="form-group">
+                <label for="id_author">Author</label>
+                {% load widget_tweaks %}
+                {% render_field form.author class="form-control" name="author"%}
+            </div>
+            <div class="form-group">
+                {% render_field form.title class="form-control" name="title" placeholder="Post title"%}
+            </div>
+        <div class="form-group">
+            {% render_field form.image class="form-control-file" %}
+        </div>
+        <div class="form-group">
+            {% render_field form.text type="textarea" class="form-control input-field" name="text" placeholder="Write your post text here." %}
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Save</button>
+    </form>
+  </div>
+{% endblock body_block %}

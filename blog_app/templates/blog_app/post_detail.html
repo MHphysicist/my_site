@@ -1,0 +1,54 @@
+{% extends "blog_app/base.html" %}
+{% block body_block %}
+  <div class="jumbotron jumbo" >
+        <div class="card text-center">
+                <h4 class="card-header">{{ post.title }}</h4>
+                <img src="{{ post.image.url }}" class="card-img" alt="post image">
+                {% if post.publish_date %}
+                <h6 class="card-footer" style="margin: 0">On: {{ post.publish_date }}</h6>
+                {% else %}
+                    <a class="btn btn-primary" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+                {% endif %}
+        </div>
+        <br>
+        <div class="container" style="text-align: center"><p>{{ post.text|safe|linebreaksbr}}</p></div>
+  </div>
+  {% if user.is_authenticated %}
+  <div class=" container jumbo row" style="margin: 0; padding: 0;">
+      <div class="col-6">
+        <a class="btn btn-warning btn-block" href="{% url 'post_update' pk=post.pk %}" style="color:white;">Update
+        </a>
+      </div>
+    <div class="col-6">
+        <a class="btn btn-danger btn-block" href="{% url 'post_delete' pk=post.pk %}" >Delete
+        </a>
+    </div>
+  </div>
+  {% endif %}
+ 
+  <hr style="height: .05px; color: black; background: black;">
+   <div class="jumbotron container jumbo" style="margin-top: 30px;">
+       <a class="btn btn-primary btn-block btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+       <div container>
+       {% for comment in post.comments.all %}
+        <br>
+        {% if user.is_authenticated or comment.approved_comment %}
+            {{ comment.create_date}}
+                {% if not comment.approved_comment %}
+                <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}">
+                    <span class="fas fa-thumbs-down"></span>
+                </a>
+                <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}">
+                        <span class="fas fa-thumbs-up"></span>
+                </a>
+                {% endif %}
+
+                <p>{{ comment.text|safe|linebreaks}}</p>
+                <p>Posted By: {{ comment.author}}</p>
+         {% endif %}
+         {% empty %}
+         <p>No commetns</p>   
+       {% endfor %}
+        </div>
+   </div>
+{% endblock body_block %}
