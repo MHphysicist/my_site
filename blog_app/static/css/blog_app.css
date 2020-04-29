@@ -6,7 +6,21 @@ title Lato Semibold Italic
 on DejaVu Sans ExtraLight
 text 
 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+}
 
+p, form .form-group {
+    font-family: "Open Sans", sans-serif;
+/*    font-size: small;
+    font-weight: 400; */
+    line-height: 24px;
+}
 /*====================================
            Preloader
  ====================================*/
@@ -52,7 +66,8 @@ text
 }
 
 #overlayer {
-    background-color: rgba(255, 227, 199, 0.6);
+    /* #fee2c6*/
+    background-color:#fee2c6;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -119,8 +134,7 @@ nav div ul li a:hover {
            All Content
  ====================================*/
 
-
-/*====================================
+ /*====================================
            Post Cards
  ====================================*/
 
@@ -157,6 +171,13 @@ nav div ul li a:hover {
 }
 
 /*====================================
+           Post-details-card
+ ====================================*/
+#psot-details-card {
+    
+
+}
+/*====================================
            Forms
  ====================================*/
 .jumbo {
@@ -171,4 +192,66 @@ nav div ul li a:hover {
 .jumbo div p {
     text-align: justify;
     font-family: noto serif;
+}
+
+/*====================================
+           About
+ ====================================*/
+ .content-box-lg .row {
+     padding-bottom: 30px;
+}
+/*====================================
+           Personal Statement
+ ====================================*/
+
+#statement{
+    text-align: justify;
+}
+
+/*====================================
+           Skills
+ ====================================*/
+ .skill {
+    margin-bottom: 20px;
+}
+
+.skill h4 {
+    line-height: 64px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.progress {
+    height: 25px;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.progress-bar {
+    background-color: #1b7c00;
+    position: relative;
+}
+
+.progress-bar span {
+    width: 28px;
+    font-size: 11px;
+    font-weight: 100;
+    font-family: "Open Sans", "Sans-serif";
+    background-color: darkcyan;
+    color: white;
+    font-weight: 600;
+    padding: 3px;
+    position: absolute;
+    left: 96%;
+    top: -35px;
+}
+
+.progress-bar span:before {
+    content: "";
+    border-top: 8px solid darkcyan;/*#212226*/
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    bottom: -8px;
+    left: 32%;
 }

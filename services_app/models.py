@@ -20,7 +20,8 @@ class ServiceRequest(models.Model):
 
     SERVICES_TYPES = [
         ('None', 'Select a service'),
-        ('Logo', 'Logo, Design'),
+        ('Teach', 'Teaching (Secondary, University)'),  
+        ('Logo', 'Logo & graphics Design'),
         ('Word', 'Document preparation (Word)'),
         ('LaTex', 'Document preparation (LaTex)'),
         ('Web_app', 'Web application (Django)'),

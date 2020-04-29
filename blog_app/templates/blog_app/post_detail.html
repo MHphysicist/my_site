@@ -1,7 +1,7 @@
 {% extends "blog_app/base.html" %}
 {% block body_block %}
   <div class="jumbotron jumbo" >
-        <div class="card text-center">
+        <div id="psot-details-card" class="card text-center">
                 <h4 class="card-header">{{ post.title }}</h4>
                 <img src="{{ post.image.url }}" class="card-img" alt="post image">
                 {% if post.publish_date %}

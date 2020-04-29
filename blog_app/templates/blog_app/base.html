@@ -17,9 +17,15 @@
     <!-- Custom Css-->
     <link rel="stylesheet" href="{% static 'css/blog_app.css' %}">
     <!-- Fonts -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Lato|Oregano&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato|Oregano&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
 
 </head>
 
@@ -30,7 +36,7 @@
     <div id="overlayer"></div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+    <nav class="navbar navbar-expand-lg sticky-bottom navbar-light">
         <a class="navbar-brand" id="brand-id" href="{% url 'post_list' %}"><img id="logo-id" src="{% static 'images/logos.png' %}"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -89,6 +95,10 @@
             easing: 'ease-in-out-sine',
         });
     </script>
+    <!-- Way points plug in-->
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <!-- blog app javaScript file-->
     <script src="{% static 'js/blog_app.js' %}"></script>
 </body>

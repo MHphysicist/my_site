@@ -9,5 +9,27 @@ $(window).on('load', function () {
 
 
 /*====================================
-           Posts lists cards
+           about
  ====================================*/
+
+
+/*====================================
+           Progress Bars
+ ====================================*/
+
+$(function(){
+
+    $(".test").waypoint(
+                function(){
+                    $(".progress-bar").each(function(){
+                        $(this).animate({
+                            width: $(this).attr("aria-valuenow") + "%"
+                        }, 500);
+                    })
+                    this.destroy();
+                },
+                {
+                    offset: '50%'
+                }
+                )
+});

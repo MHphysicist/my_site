@@ -1,7 +1,15 @@
 /*====================================
            Services cards
  ====================================*/
-#services-cards div div i {
+#services-cards p {
+    text-align: justify;
+}
+
+#services-cards h5 {
+    font-family: cursive;
+    font-weight: 800;
+}
+ #services-cards div div i {
     font-size: 60px;
     color: black;
 }
@@ -30,6 +38,7 @@
 
 #service-card-id:hover h5 {
     font-size: 150%;
+    color: gold;
 }
 #service-card-id:hover i {
     color:#03fc84;

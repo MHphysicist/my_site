@@ -11,12 +11,10 @@
       <form method="POST">
           {% csrf_token %}
           <div id="login-id" class="form-group">
-              <label for="id_username">User name:</label>
                 {% load widget_tweaks %}
                 {% render_field form.username class="form-control" name="username" placeholder="username"%}
           </div>
           <div id="login-id" class="form-group">
-              <label for="id_password">Password:</label>
               {% load widget_tweaks %}
               {% render_field form.password class="form-control" name="password" placeholder="password"%}
           </div>
