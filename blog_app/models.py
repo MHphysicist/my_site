@@ -40,3 +40,27 @@ class Comment(models.Model):
     
     def __str__(self):
         return self.text
+    
+class VisitorMessage(models.Model):
+    """ This is for the vistors messages """
+    request_date = models.DateTimeField(default = timezone.now)
+
+    visitor_name = models.CharField(
+        max_length=250,
+        blank=False,
+        null=False,
+    )
+
+    visitor_email = models.EmailField(max_length=250, blank=True)
+
+    visitor_phone = models.CharField(max_length=14, blank=True)
+
+    message_subject = models.CharField(max_length=250,)
+
+    message_text = models.TextField(max_length=1000,)
+
+    def get_absolute_url(self):
+        return reverse("about", kwargs=None)
+
+    def __str__(self):
+        return self.visitor_name

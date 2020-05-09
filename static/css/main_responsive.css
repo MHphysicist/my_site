@@ -1,0 +1,319 @@
+ /* =========================================
+                Bootstrap 4 media queries
+============================================ */
+
+ /*Xestra Large devices */
+
+ @media (min-width: 1200px) {
+
+     /* Looks good */
+     #services .row {
+         padding-right: 33px;
+     }
+ }
+
+ /* Large devices */
+
+ @media ((min-width: 992px) and (max-width: 1199px)) {
+     #navbarNav {
+         position: relative;
+         left: 35.6%;
+     }
+
+     .vertical-heading h2,
+     .horizontal-heading h2 {
+         font-size: 35px;
+     }
+
+     /* home section */
+     #home #home-heading h1 {
+         font-size: 40px;
+     }
+
+     #home-text p {
+         font-size: 15px;
+         margin: 8px 10px 17px 10px;
+     }
+
+     /* about section */
+     #me-img {
+         width: 216px;
+     }
+
+     /* statement section */
+          #impress-statement h3 {
+         font-size: 24px;
+         line-height: 30px;
+     }
+     
+     /* services section */
+     .service-tab .tab-bg {
+         background: #000;
+         padding: 16px 16px;
+         min-height: 382px;
+     }
+
+     #services .row {
+         padding-right: 33px;
+     }
+
+     .service-tab h3 {
+         font-size: 26px;
+         margin-bottom: 20px;
+     }
+
+     .service-tab p {
+         line-height: 20px;
+         margin-bottom: 20px;
+     }
+
+     #services-btn {
+         font-size: 15px;
+     }
+
+     .btn-general {
+         padding: 8px 25px 8px 25px;
+     }
+
+     /* Blog section */
+     .blog-left p {
+         margin: 46px 0 16px 0;
+         line-height: 17px;
+     }
+
+     .blog-post > p {
+         font-size: 13px;
+         line-height: 20px;
+     }
+
+     .blog-post a {
+         font-size: 13px;
+         margin-top: 20px;
+     }
+
+     .blog-post .post-meta {
+         margin-top: 20px;
+     }
+
+
+     /* Contact section*/
+     #contact-left p {
+         margin: 40px 0 16px 0;
+     }
+
+     #contact-left ul.social-list li {
+         margin: 0 12px 0 12px;
+     }
+
+ }
+
+ /* Medium Devices*/
+
+ @media ((min-width: 768px) and (max-width: 991px)) {
+
+     /* home section */
+     #home #home-heading h1 {
+         font-size: 40px;
+     }
+
+     #home-text p {
+         font-size: 15px;
+         margin: 10px 40px 10px 40px;
+     }
+
+     /* buttuns */
+     .btn-general {
+         padding: 8px 35px 8px 35px;
+     }
+
+     /* v-h headings */
+     .vertical-heading h2,
+     .horizontal-heading h2 {
+         font-size: 29px;
+     }
+
+     /* about section */
+     #me-img {
+         width: 193px;
+     }
+
+     /* skills section */
+     /* statement section */
+     #impress-statement h3 {
+         font-size: 20px;
+         line-height: 28px;
+     }
+
+     /* Service section */
+     /* tabs */
+     #services-tabs{
+         width: 100%;
+     }
+
+     .r-tabs-accordion-title {
+         text-align: center;
+         margin-bottom: 10px;
+     }
+     
+     .r-tabs-accordion-title a {
+         outline: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 0;
+    text-decoration: none;
+     }
+     
+     .r-tabs-state-active a {
+    color: #ff6364;
+    font-weight: 400;
+    border-bottom: 2px solid #ff6364;
+    padding-bottom: 5px;
+    -webkit-transition: border-color 300 linear;
+    transition: border-color 300 linear;
+}
+
+
+     .records-item:nth-of-type(1) {
+         margin-bottom: 30px;
+     }
+     
+     /* Blog section */
+     .blog-left p {
+         margin: 46px 0 16px 0;
+         line-height: 17px;
+     }
+
+     .blog-post > p {
+         font-size: 13px;
+         line-height: 15px;
+     }
+
+     .blog-post a {
+         font-size: 13px;
+         margin-top: 15px;
+     }
+
+     .blog-post .post-meta {
+         margin-top: 15px;
+     }
+     
+     /* Contact section */
+     #contact-left p {
+         margin: 40px 0 10px 0;
+     }
+     #message-btn {
+         position: relative;
+         margin-left: 50%;
+         transform: translateX(-25%);
+     }
+     
+     /* back to top button */
+     #btn-back-to-top {
+    position: fixed;
+    bottom: 15px;
+    font-size: 25px;
+    line-height: 25px;
+    right: 15px;
+    padding: 5px 8px;
+    margin: 8px;
+    display: none;
+}
+     
+ }
+
+
+
+ /* Small Devices */
+ @media (max-width: 767px) {
+    /* home section */
+     #home #home-heading h1 {
+         font-size: 22px;
+     }
+
+     #home-text p {
+         font-size: 13px;
+         line-height: 18px;
+         margin: 8px 10px 8px 10px;
+     }
+     
+          .btn-general {
+         padding: 5.7px 25px 5.7px 25px;
+              font-size: 10px;
+     }
+     
+     .content-box-lg {
+         padding: 90px 0;
+     }
+     
+     /* vertical headings */
+     .vertical-heading {
+         text-align: center;
+     }
+     
+     .vertical-heading h5 {
+         -webkit-transform: rotate(0deg);
+         transform: rotate(0deg);
+         position: static;
+         margin-bottom: 10px;
+     }
+     
+     .vertical-heading h2 {
+         font-size: 29px;
+         line-height: normal;
+         margin: 0;
+     }
+     
+     /* navbar */
+     .navbar-brand {
+         position: relative;
+         right: -2.5%;
+}
+     /* About section */
+     #about-left {
+         margin-bottom: 20px;
+     }
+     
+     #my-img-warpper {
+    position: relative;
+         width: max-content;
+         margin-left: 50%;
+         -webkit-transform: translateX(-50%);
+         transform: translateX(-50%);
+     }
+     
+     /* skills section */
+     /* statement section */
+     #impress-statement h3 {
+         font-size: 17px;
+         line-height: 20px;
+     }
+     
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

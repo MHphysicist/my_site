@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, Comment
+from .models import Post, Comment, VisitorMessage
 
 class PostForm(forms.ModelForm):
     class Meta:
@@ -27,3 +27,8 @@ class CommentForm(forms.ModelForm):
             'text': forms.Textarea(attrs={'class': 'form-control'}),
         }
         """
+        
+class MessageForm(forms.ModelForm):
+    class Meta:
+        model = VisitorMessage
+        fields = ("visitor_name", "visitor_email", "visitor_phone", "message_subject", "message_text",)

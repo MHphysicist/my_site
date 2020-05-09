@@ -11,9 +11,13 @@ from django.views.generic import  (ListView,
 
 
 # Create your views here.
-class AboutView(TemplateView):
+class AboutView(CreateView):
     template_name = 'about.html'
-
+    form_class = forms.MessageForm
+    model = models.VisitorMessage
+    
+    
+    
     # Post views
 class PostListView(ListView):
     model = models.Post
