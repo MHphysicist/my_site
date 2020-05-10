@@ -20,7 +20,7 @@ body {
 }
 
 body {
-    color: white;
+    color: #000;
 }
 
 body a {
@@ -38,14 +38,14 @@ h6 {
 
 p {
     font-family: "Open Sans", sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: justify;
 }
 
 section {
-    background: #241b47;
+    background: #fff;
     overflow: hidden;
 }
 
@@ -93,15 +93,87 @@ section {
 
 }
 
+/*====================================
+           cool overlay
+ ====================================*/
 #overlayer {
     /* #fee2c6*/
-    background-color: rgba(8.6, 5.9, 18.8, .95);
+    background-color: rgba(8.6, 5.9, 18.8, 1);
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+.tuna {
+  animation: walk-cycle 1s steps(12) infinite;
+  background: url(tuna/tuna_sprite.png) 0 0 no-repeat; 
+  height: 200px;
+  width: 400px;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  margin-left: -200px;
+  transform: translateZ(0); /* offers a bit of a performance boost by pushing some of this processing to the GPU in Safari*/
+}
+
+@keyframes walk-cycle {  
+  0% {background-position: 0 0; } 
+  100% {background-position: 0 -2391px; } 
+}
+
+.foreground, .midground, .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  translate3d(0,0,0); 
+}
+
+.foreground {
+  animation: parallax_fg linear 10s infinite both;
+  background:  url(tuna/foreground_grass.png) 0 100% repeat-x;
+  z-index: 3;
+}
+
+@keyframes parallax_fg {  
+  0% { background-position: -3584px 100%;} 
+  100% {background-position: 0 100%; } 
+}
+
+.midground {
+  animation: parallax_mg linear 20s infinite;
+  background:  url(tuna/midground_grass.png) 0 100% repeat-x;
+  z-index: 2;
+}
+
+@keyframes parallax_mg {  
+  0% { background-position: -3000px 100%;} 
+  100% {background-position: 0 100%; } 
+}
+
+.background {
+  background-image:
+    url(tuna/background_mountain5.png),
+    url(tuna/background_mountain4.png),
+    url(tuna/background_mountain3.png),
+    url(tuna/background_mountain2.png),
+    url(tuna/background_mountain1.png);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  z-index: 1;
+  animation: parallax_bg linear 40s infinite;
+}
+
+@keyframes parallax_bg {
+  100% { background-position-x: 2400px, 2000px, 1800px, 1600px, 1200px;}
+}
+
+body {
+    background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%),
+    #d2d2d2 url(tuna/background_clouds.png);
 }
 
 #home {
@@ -168,8 +240,8 @@ section {
 .btn-home:hover,
 .btn-home:focus {
     color: #fff;
-    background-color: #ff0051;
-    border: 1px solid #ff0051;
+    background-color: #04c2c9;
+    border: 1px solid #04c2c9;
 }
 
 .btn-service {
@@ -245,7 +317,7 @@ section {
 ============================================ */
 
 .vertical-heading h5 {
-    color: #f4c613;
+    color: #04c2c9;
     /*#ff0051*/
     font-size: 14px;
     font-weight: 500;
@@ -314,7 +386,7 @@ section {
            Skills section
  ====================================*/
 #skills {
-    background-color: #;
+    background-color: #f4f4f4;
 }
 
 #skills-text-bg {
@@ -323,7 +395,7 @@ section {
     left: 0px;
     right: 0px;
     transform: translateY(-20px);
-    background-color: #362f69;
+    background-color: #04c2c9;
     background-size: contain;
 }
 
@@ -345,7 +417,7 @@ section {
 }
 
 .progress-bar {
-    background-color: darkcyan;
+    background-color: #00a1a7;
     position: relative;
 }
 
@@ -790,8 +862,8 @@ ul.social-list li:nth-child(3) a:hover {
 
 #contact-form {
     padding: 20px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
     border-radius: 5px;
 }
 
@@ -804,7 +876,7 @@ ul.social-list li:nth-child(3) a:hover {
 }
 
 #contact-form form .form-group input {
-    background-color: #241b47;
+    background-color: rgba(8.6, 5.9, 18.8, 1);
     border-color: #fff;
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
@@ -817,7 +889,7 @@ ul.social-list li:nth-child(3) a:hover {
 }
 
 #contact-form form .form-group textarea {
-    background-color: #241b47;
+    background-color: rgba(8.6, 5.9, 18.8, 1);
     border-color: #fff;
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
@@ -874,10 +946,11 @@ ul.navbar-nav > li > a:focus {
 
 /* navigation bar on scroll */
 .nav-on-scroll {
-    background: #241b47;
-    padding: 5px 0;
+    background: #1b242f;
+    padding: 0px 0;
     -webkit-box-shadow: 0 8px 6px -9px rgba(0, 0, 0, .8);
     box-shadow: 0 8px 6px -9px rgba(0, 0, 0, .8);
+    border-bottom: 3px solid #04c2c9;
 }
 
 .nav-on-scroll ul.navbar-nav > li > a {}

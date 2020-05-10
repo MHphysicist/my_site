@@ -46,7 +46,7 @@ $(function () {
         var section_id = $(this).attr("href");
 
         $("html, body").animate({
-            scrollTop: $(section_id).offset().top - 68
+            scrollTop: $(section_id).offset().top - 40
         }, 1250, "easeInOutExpo");
     })
 });

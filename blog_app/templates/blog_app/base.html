@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{% static 'css/owl_carousel/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl_carousel/owl.theme.default.min.css' %}">
     <!-- divicon -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="{% static 'css/devicon/devicon.min.css' %}">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{% static 'css/magnific-popup/magnific-popup.min.css' %}">
     <!-- my custom Css-->
@@ -46,7 +46,16 @@
     <!-- Background Image-->
     <div id="bg-img"></div>
     <!-- Overlayer -->
-    <div id="overlayer"></div>
+    <div id="overlayer">
+        <div class="foreground"></div>
+
+<div class="midground">
+  <div class="tuna"></div>
+</div>
+
+<div class="background">
+</div>
+    </div>
 
     <!-- Navbar -->
     <!--    <nav class="navbar navbar-expand-lg">
