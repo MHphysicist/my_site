@@ -20,7 +20,7 @@ body {
 }
 
 body {
-    color: #000;
+    color: white;
 }
 
 body a {
@@ -38,14 +38,14 @@ h6 {
 
 p {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 24px;
     text-align: justify;
 }
 
 section {
-    background: #fff;
+    background: rgba(8.6, 5.9, 18.8, 1);
     overflow: hidden;
 }
 
@@ -93,9 +93,6 @@ section {
 
 }
 
-/*====================================
-           cool overlay
- ====================================*/
 #overlayer {
     /* #fee2c6*/
     background-color: rgba(8.6, 5.9, 18.8, 1);
@@ -120,8 +117,8 @@ section {
 }
 
 @keyframes walk-cycle {  
-  0% {background-position: 0 0; } 
-  100% {background-position: 0 -2391px; } 
+  0% {background-position: 0px 0; } 
+  100% {background-position: 0px -2391px; } 
 }
 
 .foreground, .midground, .background {
@@ -129,7 +126,7 @@ section {
   height: 100%;
   position: absolute;
   top: 0; left: 0;
-  translate3d(0,0,0); 
+  transform:  translate3d(0,0,0); 
 }
 
 .foreground {
@@ -173,7 +170,7 @@ section {
 
 body {
     background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%),
-    #d2d2d2 url(tuna/background_clouds.png);
+    #d2d2d2 url(tunabackground_clouds.png);
 }
 
 #home {
@@ -223,25 +220,26 @@ body {
 
 .btn-general {
     font-family: 'Raleway', sans-serif;
-    border-radius: 28px;
+    border-radius: 5px;
     font-size: 13px;
     text-transform: uppercase;
     margin: 0 6px;
-    padding: 12px 46px 12px 46px;
+    padding: 5px;
     -webkit-transition: all .5s;
     transition: all .5s;
+    border: 2.5px solid #fff;
 }
 
 .btn-home {
     color: #fff;
-    border: 1px solid #fff;
+    padding: 10px 20px;
 }
 
 .btn-home:hover,
 .btn-home:focus {
     color: #fff;
     background-color: #04c2c9;
-    border: 1px solid #04c2c9;
+    border-color: #04c2c9;
 }
 
 .btn-service {
@@ -258,6 +256,16 @@ body {
     border: 1px solid #fe6263;
 }
 
+.btn-blog {
+    color: #fff;
+}
+
+.btn-blog:hover,
+.btn-blog:focus {
+    color: #fff;
+    background-color: #04c2c9;
+    border-color: #04c2c9;
+}
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
@@ -317,7 +325,7 @@ body {
 ============================================ */
 
 .vertical-heading h5 {
-    color: #04c2c9;
+    color: #f4c613;
     /*#ff0051*/
     font-size: 14px;
     font-weight: 500;
@@ -342,6 +350,11 @@ body {
     line-height: 45px;
 }
 
+.horizontal-heading h2 strong,
+.vertical-heading h2 strong {
+    color: #04c2c9;
+}
+
 .horizontal-heading {
     margin-bottom: 50px;
 }
@@ -362,8 +375,12 @@ body {
                 My image
 ============================================ */
 #me-img {
-    width: 236px;
+    width: 100%;
     margin-left: 0px;
+}
+
+#my-img-warpper {
+    margin-top: 50px;
 }
 
 /* =========================================
@@ -386,27 +403,19 @@ body {
            Skills section
  ====================================*/
 #skills {
-    background-color: #f4f4f4;
-}
-
-#skills-text-bg {
-    height: 185px;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    transform: translateY(-20px);
-    background-color: #04c2c9;
-    background-size: contain;
+    background-color: #;
 }
 
 .skill {
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 .skill h4 {
-    line-height: 64px;
+    position: relative;
+    top: 22.5px;
+    z-index: 10;
     font-size: 18px;
-    margin: 0;
+    margin: 0 0px 0 5px;
     font-weight: normal;
 }
 
@@ -417,34 +426,21 @@ body {
 }
 
 .progress-bar {
-    background-color: #00a1a7;
+    background-color: #02888d;
     position: relative;
 }
 
 .progress-bar span {
     width: 28px;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 100;
     font-family: "Open Sans", "Sans-serif";
-    background-color: lightcyan;
-    color: #000;
+    color: #fff;
     font-weight: 600;
-    padding: 3px;
     position: absolute;
-    left: 96%;
-    top: -40px;
+    right: 1000%;
 }
 
-.progress-bar span:before {
-    content: "";
-    border-top: 8px solid lightcyan;
-    /*#212226*/
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    position: absolute;
-    bottom: -8px;
-    left: 32%;
-}
 
 /*====================================
            Statement section
@@ -467,8 +463,8 @@ body {
 /*====================================
            Services Section
  ====================================*/
-#services {
-    
+#services .horizontal-heading {
+    margin-bottom: 25px;
 }
 
 #services-tabs ul {
@@ -612,7 +608,7 @@ body {
 }
 
 .portofolio-item-details h3 {
-    color: #eae8af;
+    color: #00aced;
     text-transform: uppercase;
     font-size: 30px;
     margin: 0;
@@ -729,12 +725,13 @@ body {
 }
 
 .blog-post {
+    background-color: rgb(12, 8, 25);
     padding: 20px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 1);
     border-radius: 5px;
-        -webkit-transition: all 400ms linear;
-    transition: all 400ms linear;
+        -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
 }
 
 .blog-post h4 {
@@ -755,19 +752,20 @@ body {
     text-transform: uppercase;
     font-family: "Raleway", sans-serif;
     color: #f4c613;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
     -webkit-transition: all 400ms linear;
     transition: all 400ms linear;
+    
 }
 
 .blog-post:hover,
 .blog-post:focus {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .blog-post a:hover {
-    color: #fe6263;
+    color: #04c2c9;
 }
 
 .blog-post .post-meta {
@@ -846,24 +844,44 @@ ul.social-list li a {
 }
 
 ul.social-list li:nth-child(1) a:hover {
+    background: #0e76a8;
+    border-color: transparent;
+}
+ul.social-list li:nth-child(2) a:hover {
     background: #3b5998;
     border-color: transparent;
 }
 
-ul.social-list li:nth-child(2) a:hover {
-    background: #00aced;
-    border-color: transparent;
-}
-
 ul.social-list li:nth-child(3) a:hover {
-    background: #dd4b39;
+    background: #fb3958;
     border-color: transparent;
 }
 
+ul.social-list li:nth-child(4) a:hover {
+    background: #4FCE5D;
+    border-color: transparent;
+}
+
+ul.social-list li:nth-child(5) a:hover {
+    background: #0088cc;
+    border-color: transparent;
+}
+
+ul.social-list li:nth-child(6) a:hover {
+    background: #fff;
+    color: #000;
+    border-color: transparent;
+}
+
+ul.social-list li:nth-child(7) a:hover {
+    background: #0088cc;
+    border-color: transparent;
+}
 #contact-form {
+    background-color: rgb(12, 8, 25);
     padding: 20px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 1);
     border-radius: 5px;
 }
 
@@ -926,14 +944,14 @@ footer p {
 
 #navbarNav {
     position: relative;
-    left: 46.3%;
+    left: 43.3%;
 }
 
 ul.navbar-nav > li > a {
     font-family: "Raleway", sans-serif;
     color: #fff;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
@@ -946,23 +964,25 @@ ul.navbar-nav > li > a:focus {
 
 /* navigation bar on scroll */
 .nav-on-scroll {
-    background: #1b242f;
+    background: rgb(12, 8, 25);
     padding: 0px 0;
     -webkit-box-shadow: 0 8px 6px -9px rgba(0, 0, 0, .8);
     box-shadow: 0 8px 6px -9px rgba(0, 0, 0, .8);
-    border-bottom: 3px solid #04c2c9;
 }
 
-.nav-on-scroll ul.navbar-nav > li > a {}
+.nav-on-scroll ul.navbar-nav > li > a {
+}
 
 ul.navbar-nav > li > a:hover,
 ul.navbar-nav > li > a:focus {
-    color: #ff0051;
+    color: #04c2c9;
 }
 
 .nav-on-scroll ul.navbar-nav > li > a.active {
     color: #ff0051;
     font-weight: 500;
+        font-size: 15px;
+    font-weight: 600;
 }
 
 
