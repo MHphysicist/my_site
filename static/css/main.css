@@ -399,6 +399,9 @@ section {
     margin-bottom: 25px;
 }
 
+#services-tabs {
+    width: 100%;
+}
 #services-tabs ul {
     margin-bottom: 10px;
 }
@@ -433,7 +436,9 @@ section {
 }
 
 .service-tab img {
+    max-width: 100%;
     width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 

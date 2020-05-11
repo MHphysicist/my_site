@@ -116,6 +116,26 @@
      /* buttuns */
 
      /* v-h headings */
+     #skills .vertical-heading,
+     #portfolio .vertical-heading {
+         text-align: center;
+     }
+     
+     #skills .vertical-heading h5,
+     #portfolio .vertical-heading h5 {
+         -webkit-transform: rotate(0deg);
+         transform: rotate(0deg);
+         position: static;
+         margin-bottom: 10px;
+     }
+     
+     #skills .vertical-heading h2,
+     #portfolio .vertical-heading h2 {
+         font-size: 29px;
+         line-height: normal;
+         margin: 0;
+     }
+     
      .vertical-heading h2,
      .horizontal-heading h2 {
          font-size: 29px;
@@ -136,7 +156,8 @@
      /* Service section */
      /* tabs */
      #services-tabs{
-         width: 100%;
+         max-width: 100%;
+         height: auto;
      }
 
      .r-tabs-accordion-title {
@@ -170,8 +191,11 @@
      }
      
      /* Blog section */
+     .blog-left {
+         margin-bottom: 50px;
+     }
      .blog-left p {
-         margin: 46px 0 16px 0;
+         margin: 21px 0 26px 0;
          line-height: 17px;
      }
 
@@ -199,6 +223,23 @@
          transform: translateX(-25%);
      }
      
+     ul.info-details li {
+    font-family: "Open Sans", sans-serif;
+    margin-top: 5px;
+    display: -webkit-inline-box;
+         display: -ms-inline-flexbox;
+         display: inline-flex;
+}
+     
+     ul.info-details li i {
+         width: 30px;
+         margin-left: 10px;
+     }
+     #contact-info {
+         margin-top: 50px;
+     }
+     
+     
      /* back to top button */
      #btn-back-to-top {
     position: fixed;
@@ -217,6 +258,9 @@
 
  /* Small Devices */
  @media (max-width: 767px) {
+     p {
+         font-size: 13px;
+     }
     /* home section */
      #home #home-heading h1 {
          font-size: 22px;
@@ -228,6 +272,10 @@
          margin: 8px 10px 8px 10px;
      }
      
+     /* content boxes */
+     .content-box-md {
+    padding: 80px 0;
+}
           .btn-general {
          padding: 5.7px 25px 5.7px 25px;
               font-size: 10px;
@@ -249,7 +297,8 @@
          margin-bottom: 10px;
      }
      
-     .vertical-heading h2 {
+     .vertical-heading h2,
+     .horizontal-heading h2 {
          font-size: 29px;
          line-height: normal;
          margin: 0;
@@ -261,6 +310,9 @@
          right: -2.5%;
 }
      /* About section */
+     #about-left .vertical-heading {
+         margin-bottom: 20px;
+     }
      #about-left {
          margin-bottom: 20px;
      }
@@ -274,16 +326,104 @@
      }
      
      /* skills section */
+          #skills .vertical-heading {
+         margin-bottom: 20px;
+     }
+     
+     .skill h4 {
+         font-size: 15px;
+         
+     }
+     
+     /* Services section */
+     .r-tabs-accordion-title {
+         text-align: center;
+         margin-bottom: 10px;
+     }
+     
+     .r-tabs-accordion-title a {
+         outline: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 0;
+    text-decoration: none;
+     }
+     
+     .r-tabs-state-active a {
+    color: #ff6364;
+    font-weight: 400;
+    border-bottom: 2px solid #ff6364;
+    padding-bottom: 5px;
+    -webkit-transition: border-color 300 linear;
+    transition: border-color 300 linear;
+}
+     
+     
      /* statement section */
      #impress-statement h3 {
          font-size: 17px;
-         line-height: 20px;
+         line-height: 25px;
      }
      
  }
 
 
-
+@media (max-width: 576px){
+    /* Services section */
+/*    .service-tab .container .row {
+        display: inline-block;
+    }
+    
+    .service-tab img {
+    max-width: max-content;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}*/
+    #services-tabs{
+        display: inline;
+         max-width: 95%;
+        transform: translateX(2.5%);
+         height: auto;
+     }
+     .r-tabs-state-active a {
+    color: #ff6364;
+    font-weight: 400;
+    border-bottom: 2px solid #ff6364;
+    padding-bottom: 5px;
+    -webkit-transition: border-color 300 linear;
+    transition: border-color 300 linear;
+}
+    
+    
+     .r-tabs-accordion-title {
+         text-align: center;
+         margin-bottom: 10px;
+     }
+     
+     .r-tabs-accordion-title a {
+         outline: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 0;
+    text-decoration: none;
+     }
+     
+     .r-tabs-state-active a {
+    color: #ff6364;
+    font-weight: 400;
+    border-bottom: 2px solid #ff6364;
+    padding-bottom: 5px;
+    -webkit-transition: border-color 300 linear;
+    transition: border-color 300 linear;
+}
+}
 
 
 

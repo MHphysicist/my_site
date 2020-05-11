@@ -75,7 +75,7 @@ $(document).ready(function () {
         autoplayHoverPause: true,
         responsive: {
             0: { // from 0 and up
-                items: 3,
+                items: 2,
             },
             768: { // from 768 and up
                 items: 4,
