@@ -77,7 +77,7 @@ section {
 /*====================================
            Home section
  ====================================*/
-#bg-img {
+#home-bg-video {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -88,89 +88,20 @@ section {
     width: auto;
     height: auto;
     z-index: -1;
-    background: url(./static_images/ground.jpg) no-repeat;
+    background: url("./static_videos/ground.mp4") no-repeat;
     background-size: cover;
-
 }
+
 
 #overlayer {
     /* #fee2c6*/
-    background-color: rgba(8.6, 5.9, 18.8, 1);
+    background-color: rgba(8.6, 5.9, 18.8, .8);
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
-}
-
-.tuna {
-  animation: walk-cycle 1s steps(12) infinite;
-  background: url(tuna/tuna_sprite.png) 0 0 no-repeat; 
-  height: 200px;
-  width: 400px;
-  position: absolute;
-  bottom: 1px;
-  left: 50%;
-  margin-left: -200px;
-  transform: translateZ(0); /* offers a bit of a performance boost by pushing some of this processing to the GPU in Safari*/
-}
-
-@keyframes walk-cycle {  
-  0% {background-position: 0px 0; } 
-  100% {background-position: 0px -2391px; } 
-}
-
-.foreground, .midground, .background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0; left: 0;
-  transform:  translate3d(0,0,0); 
-}
-
-.foreground {
-  animation: parallax_fg linear 10s infinite both;
-  background:  url(tuna/foreground_grass.png) 0 100% repeat-x;
-  z-index: 3;
-}
-
-@keyframes parallax_fg {  
-  0% { background-position: -3584px 100%;} 
-  100% {background-position: 0 100%; } 
-}
-
-.midground {
-  animation: parallax_mg linear 20s infinite;
-  background:  url(tuna/midground_grass.png) 0 100% repeat-x;
-  z-index: 2;
-}
-
-@keyframes parallax_mg {  
-  0% { background-position: -3000px 100%;} 
-  100% {background-position: 0 100%; } 
-}
-
-.background {
-  background-image:
-    url(tuna/background_mountain5.png),
-    url(tuna/background_mountain4.png),
-    url(tuna/background_mountain3.png),
-    url(tuna/background_mountain2.png),
-    url(tuna/background_mountain1.png);
-  background-repeat: repeat-x;
-  background-position: 0 100%;
-  z-index: 1;
-  animation: parallax_bg linear 40s infinite;
-}
-
-@keyframes parallax_bg {
-  100% { background-position-x: 2400px, 2000px, 1800px, 1600px, 1200px;}
-}
-
-body {
-    background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%),
-    #d2d2d2 url(tunabackground_clouds.png);
 }
 
 #home {
@@ -227,7 +158,7 @@ body {
     padding: 5px;
     -webkit-transition: all .5s;
     transition: all .5s;
-    border: 2.5px solid #fff;
+    border: 1.99px solid #fff;
 }
 
 .btn-home {
@@ -247,6 +178,7 @@ body {
     border: 1px solid #fff;
     justify-content: center;
     display: flex;
+    padding: 10px;
 }
 
 .btn-service:hover,
@@ -508,7 +440,7 @@ body {
 .service-tab .tab-bg {
     background: #000;
     padding: 40px 30px;
-    min-height: 456px;
+    min-height: 470px;
 }
 
 .service-tab h2 {
@@ -519,18 +451,19 @@ body {
 
 .service-tab h3 {
     font-size: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    margin-top: 18px;
 }
 
 .service-tab p {
     text-align: justify;
     line-height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 /* divicon carousel */
 #divicon-carousel {
-    padding-bottom: 18px;
+    padding-bottom: 0px;
 }
 
 #divicon-carousel div {
@@ -539,6 +472,11 @@ body {
     line-height: 10px;
     margin-right: 2px;
 }
+
+.r-tabs .r-tabs-panel {
+    padding: 0px;
+}
+
 
 /* =========================================
                 Portfolio
@@ -672,6 +610,7 @@ body {
 
 .records-item p {
     text-align: center;
+    text-transform: uppercase;
 }
 
 .records-item {
@@ -944,7 +883,7 @@ footer p {
 
 #navbarNav {
     position: relative;
-    left: 43.2%;
+    left: 37.8%;
 }
 
 ul.navbar-nav > li > a {

@@ -30,7 +30,7 @@
     <!-- my custom Css-->
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <!-- my custom responsive css -->
-    <link rel="stylesheet" href="{% static 'css/-main_responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main_responsive.css' %}">
     <!-- Fonts -->
     <!-- MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -44,18 +44,14 @@
         <div id="preloader-status">&nbsp;</div>
     </div>
     <!-- Background Image-->
-    <div id="bg-img"></div>
+    <video id="home-bg-video" autoplay loop muted>
+            <source src="{% static 'css/static_videos/ground.mp4' %}" type="video/mp4">
+            <source src="video/solo.ogv" type="video/ogg">
+            <source src="video/solo.webm" type="video/webm">
+    </video>
     <!-- Overlayer -->
     <div id="overlayer">
     </div>
-            <div class="foreground"></div>
-
-<div class="midground">
-  <div class="tuna"></div>
-</div>
-
-<div class="background">
-</div>
 
     <!-- Navbar -->
     <!--    <nav class="navbar navbar-expand-lg">

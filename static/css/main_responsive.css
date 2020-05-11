@@ -7,9 +7,7 @@
  @media (min-width: 1200px) {
 
      /* Looks good */
-     #services .row {
-         padding-right: 33px;
-     }
+     
  }
 
  /* Large devices */
@@ -17,7 +15,7 @@
  @media ((min-width: 992px) and (max-width: 1199px)) {
      #navbarNav {
          position: relative;
-         left: 35.6%;
+         left: 24.6%;
      }
 
      .vertical-heading h2,
@@ -50,16 +48,13 @@
      .service-tab .tab-bg {
          background: #000;
          padding: 16px 16px;
-         min-height: 382px;
-     }
-
-     #services .row {
-         padding-right: 33px;
+         min-height: 395px;
      }
 
      .service-tab h3 {
          font-size: 26px;
          margin-bottom: 20px;
+         margin-top: 12px;
      }
 
      .service-tab p {
@@ -71,9 +66,6 @@
          font-size: 15px;
      }
 
-     .btn-general {
-         padding: 8px 25px 8px 25px;
-     }
 
      /* Blog section */
      .blog-left p {
@@ -122,9 +114,6 @@
      }
 
      /* buttuns */
-     .btn-general {
-         padding: 8px 35px 8px 35px;
-     }
 
      /* v-h headings */
      .vertical-heading h2,
