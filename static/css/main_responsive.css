@@ -2,7 +2,7 @@
                 Bootstrap 4 media queries
 ============================================ */
 
- /*Xestra Large devices */
+ /* Extra large devices (large desktops, 1200px and up) */
 
  @media (min-width: 1200px) {
 
@@ -10,12 +10,12 @@
      
  }
 
- /* Large devices */
+ /* Large devices (desktops, 992px and up) */
 
  @media ((min-width: 992px) and (max-width: 1199px)) {
      #navbarNav {
          position: relative;
-         left: 24.6%;
+         left: 31.4%;
      }
 
      .vertical-heading h2,
@@ -99,9 +99,14 @@
 
  }
 
- /* Medium Devices*/
+ /* Medium devices (tablets, 768px and up) */
 
  @media ((min-width: 768px) and (max-width: 991px)) {
+     
+     #navbarNav {
+         position: relative;
+         left: 4.45%;
+     }
 
      /* home section */
      #home #home-heading h1 {
@@ -112,13 +117,32 @@
          font-size: 15px;
          margin: 10px 40px 10px 40px;
      }
+     
+     /* content boxes */
+     .content-box-lg {
+         padding: 80px 0
+     }
+     
+     .content-box-md {
+         padding: 70px 0;
+     }
+     
+     .content-box-sm {
+         padding: 50px 0;
+     }
 
      /* buttuns */
 
-     /* v-h headings */
-     #skills .vertical-heading,
+     /* v-h headings */     
+     .vertical-heading h2,
+     .horizontal-heading h2 {
+         font-size: 29px;
+     }
+     
+          #skills .vertical-heading,
      #portfolio .vertical-heading {
          text-align: center;
+         margin-bottom: 20px;
      }
      
      #skills .vertical-heading h5,
@@ -131,20 +155,18 @@
      
      #skills .vertical-heading h2,
      #portfolio .vertical-heading h2 {
-         font-size: 29px;
          line-height: normal;
          margin: 0;
-     }
-     
-     .vertical-heading h2,
-     .horizontal-heading h2 {
-         font-size: 29px;
      }
 
      /* about section */
      #me-img {
          width: 193px;
      }
+     
+     #about-right p:first-child {
+    margin-bottom: 1rem;
+}
 
      /* skills section */
      /* statement section */
@@ -168,7 +190,6 @@
      .r-tabs-accordion-title a {
          outline: 0;
     font-family: "Raleway", sans-serif;
-    font-size: 14px;
     color: #fff;
     text-transform: uppercase;
     font-weight: 300;
@@ -184,8 +205,13 @@
     -webkit-transition: border-color 300 linear;
     transition: border-color 300 linear;
 }
+     .service-tab h3 {
+    font-size: 29px;
+    margin-bottom: 15px;
+    margin-top: 37px;
+}
 
-
+     /* reconrds section */
      .records-item:nth-of-type(1) {
          margin-bottom: 30px;
      }
@@ -254,12 +280,11 @@
      
  }
 
-
-
- /* Small Devices */
- @media (max-width: 767px) {
+ /* Small devices (landscape phones, 576px and up) */
+ @media ((min-width: 576px) and (max-width: 767px)) {
      p {
          font-size: 13px;
+         line-height: 18px;
      }
     /* home section */
      #home #home-heading h1 {
@@ -314,9 +339,9 @@
          margin-bottom: 20px;
      }
      #about-left {
-         margin-bottom: 20px;
+         margin-bottom: 10px;
      }
-     
+      
      #my-img-warpper {
     position: relative;
          width: max-content;
@@ -324,6 +349,14 @@
          -webkit-transform: translateX(-50%);
          transform: translateX(-50%);
      }
+
+     #about-right p {
+        margin-bottom: 15px;
+    }
+
+    #about-right p:first-child {
+        margin-bottom: 15px;
+    }
      
      /* skills section */
           #skills .vertical-heading {
@@ -371,58 +404,8 @@
  }
 
 
-@media (max-width: 576px){
-    /* Services section */
-/*    .service-tab .container .row {
-        display: inline-block;
-    }
+@media ((min-width: 0px) and (max-width: 575px)) {
     
-    .service-tab img {
-    max-width: max-content;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-}*/
-    #services-tabs{
-        display: inline;
-         max-width: 95%;
-        transform: translateX(2.5%);
-         height: auto;
-     }
-     .r-tabs-state-active a {
-    color: #ff6364;
-    font-weight: 400;
-    border-bottom: 2px solid #ff6364;
-    padding-bottom: 5px;
-    -webkit-transition: border-color 300 linear;
-    transition: border-color 300 linear;
-}
-    
-    
-     .r-tabs-accordion-title {
-         text-align: center;
-         margin-bottom: 10px;
-     }
-     
-     .r-tabs-accordion-title a {
-         outline: 0;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 300;
-    padding: 0;
-    text-decoration: none;
-     }
-     
-     .r-tabs-state-active a {
-    color: #ff6364;
-    font-weight: 400;
-    border-bottom: 2px solid #ff6364;
-    padding-bottom: 5px;
-    -webkit-transition: border-color 300 linear;
-    transition: border-color 300 linear;
-}
 }
 
 
