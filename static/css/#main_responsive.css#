@@ -111,11 +111,10 @@
      ul.navbar-nav > li > a {
          font-size: 13.8px;
      }
-
+     
      .nav-on-scroll ul.navbar-nav > li > a.active {
          font-size: 13.8px;
      }
-
      /* home section */
      #home-text p {
          font-size: 15px;
@@ -293,7 +292,6 @@
      p {
          font-size: 13px;
          line-height: 18px;
-         text-align: center;
      }
 
      /* home section */
@@ -308,17 +306,17 @@
      }
 
      /* content boxes */
-     .content-box-lg {
-         padding: 70px 0;
-     }
-     
      .content-box-md {
-         padding: 70px 0;
+         padding: 80px 0;
      }
 
      .btn-general {
          padding: 5.7px 25px 5.7px 25px;
          font-size: 10px;
+     }
+
+     .content-box-lg {
+         padding: 90px 0;
      }
 
      /* vertical headings */
@@ -408,129 +406,35 @@
          transition: border-color 300 linear;
      }
 
-     .service-tab .tab-bg {
-         background:#000;
-         padding: 20px 20px;
-         min-height: auto;
-     }
-
-     .service-tab p {
-         line-height: 18px;
-     }
-
-     .service-tab h3 {
-         font-size: 24px;
-         margin-top: 0;
-     }
-
 
      /* statement section */
      #impress-statement h3 {
          font-size: 17px;
          line-height: 25px;
      }
-
+     
      /* Portfolio section */
      #portfolio .vertical-heading {
-         margin-bottom: 20px;
+    margin-bottom: 20px;
      }
 
-     #portofolio-wrapper {
-         padding-top: 15px;
-     }
-
+     
+     
      /* Records section */
      .records-item:nth-of-type(1) {
          margin-bottom: 30px;
-         padding: 30px 25px;
      }
      
-     #records .content-box-sm {
-         padding: 50px 0 25px 0;
-     }
-     .records-item i {
-         font-size: 32px;
-         color: #fff;
-         margin: 0 0 7px 0;
-     }
-     
-     #records .horizontal-heading {
-        margin-bottom: 30px;
-    }
-
      /* Blog section */
      .blog-left p {
-         margin: 0px 0 20px 0;
-     }
-
+    margin: 0px 0 20px 0;
+}
+     
      #blog-btn a {
          position: relative;
          left: 50%;
          transform: translateX(-50%);
      }
-
-     .blog-post {
-         margin-top: 25px;
-     }
-     
-     .blog-post h4 {
-         font-size: 22px;
-     }
-
-     .blog-post > p {
-         font-size: 13px;
-         line-height: 18px;
-     }
-     
-     .blog-post a {
-         font-size: 13px;
-         margin-top: 13px;
-     }
-     
-     .blog-post .post-meta {
-         margin-top: 13px;
-     }
-
-     /* Contact section */
-     #contact-left p {
-         margin: 0px 0 20px 0;
-     }
-     
-     #message-btn {
-         position: relative;
-         margin-left: 50%;
-         transform: translateX(-25%);
-     }
-
-     .info h4 {
-         font-size: 22px;
-     }
-     
-     #contact-left ul.social-list li {
-        margin: 0 17px 0 17px;
-     }
-     
-     ul.info-details li {
-         font-family: "Open Sans", sans-serif;
-         margin-top: 5px;
-         display: -webkit-inline-box;
-         display: -ms-inline-flexbox;
-         display: inline-flex;
-     }
-
-     ul.info-details li i {
-         width: 30px;
-         margin-left: 10px;
-     }
-     
-     #contact-form h4 {
-        font-size: 22px;
-        text-align: center;
-    }
-     /* footer */
-     footer {
-        padding: 16px 0 20px 0;
-    }
 
  }
 
