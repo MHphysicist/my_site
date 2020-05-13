@@ -888,7 +888,7 @@ footer p {
 
 #navbarNav {
     position: relative;
-    left: 43.3%;
+    left: 37.7%;;
 }
 
 ul.navbar-nav > li > a {
@@ -929,8 +929,9 @@ ul.navbar-nav > li > a:focus {
     font-weight: 600;
 }
 
-
-
+/*====================================
+           Mobile navigation menu
+ ====================================*/
 
 
 /*====================================

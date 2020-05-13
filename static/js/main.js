@@ -52,6 +52,28 @@ $(function () {
 });
 
 /*====================================
+           Mobile menu
+ ====================================*/
+$(function () {
+
+    // Show mobile nav
+    $("#mobile-nav-open-btn").click(function () {
+        $("#mobile-nav").css("height", "100%");
+        /* hide mobile nav triger bottun */
+        $("#mobile-nav-open-btn").css("display","none");
+        $("#mobile-nav-close-btn").css("display","block");
+    });
+
+    // Hide mobile nav
+    $("#mobile-nav-close-btn, #mobile-nav a").click(function () {
+        $("#mobile-nav").css("height", "0%");
+        /* hide mobile nav trigger bottun */
+        $("#mobile-nav-open-btn").css("display","block");
+        $("#mobile-nav-close-btn").css("display","none");
+    });
+
+});
+/*====================================
            Services section
  ====================================*/
 /*====================================
@@ -75,7 +97,7 @@ $(document).ready(function () {
         autoplayHoverPause: true,
         responsive: {
             0: { // from 0 and up
-                items: 2,
+                items: 3,
             },
             768: { // from 768 and up
                 items: 4,

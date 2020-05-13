@@ -6,6 +6,7 @@
 <header>
     <nav class="navbar fixed-top navbar-expand-md">
         <div class="container">
+            <span id="mobile-nav-open-btn">&#9776;</span>
             <a href="#" class="navbar-brand smooth-scroll">
                 <img src="{% static 'images/logo/my-logo.png' %}" alt="logo">
             </a>
@@ -21,6 +22,22 @@
                     <li><a href="#blog" class="nav-link smooth-scroll">Blog</a></li>
                     <li><a href="#contact" class="nav-link smooth-scroll">Contact</a></li>
                 </ul>
+            </div>
+
+            <div id="mobile-nav">
+                <!-- Mobile Menu Close Button -->
+                <span id="mobile-nav-close-btn">&times;</span>
+                <div id="mobile-nav-content">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#home" class="nav-link smooth-scroll">Home</a></li>
+                        <li><a href="#about" class="nav-link smooth-scroll">About</a></li>
+                        <li><a href="#skills" class="nav-link smooth-scroll">Skills</a></li>
+                        <li><a href="#services" class="nav-link smooth-scroll">Services</a></li>
+                        <li><a href="#portfolio" class="nav-link smooth-scroll">Portfolio</a></li>
+                        <li><a href="#blog" class="nav-link smooth-scroll">Blog</a></li>
+                        <li><a href="#contact" class="nav-link smooth-scroll">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
