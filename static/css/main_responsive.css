@@ -32,12 +32,12 @@
 
 #mobile-nav-close-btn {
     font-family: "Raleway", sans-serif;
-    font-size: 54px;
+    font-size: 91px;
     font-weight: 400;
     cursor: pointer;
     position: absolute;
-    top: -8px;
-    right: 5.1%;
+    top: -40px;
+    right: 5.3%;
     -webkit-transition: .3s;
     transition: .3s;
 }
@@ -87,7 +87,7 @@
 
  /* Extra large devices (large desktops, 1200px and up) */
 
- @media (min-width: 1200px) {
+ @media (min-width: 1200px){
 
      /* Looks good */
 
@@ -95,7 +95,7 @@
 
  /* Large devices (desktops, 992px and up) */
 
- @media ((min-width: 992px) and (max-width: 1199px)) {
+ @media ((min-width: 992px) and (max-width: 1199px)){
      /* Navigation bar */
      #navbarNav {
          position: relative;
@@ -185,7 +185,7 @@
 
  /* Medium devices (tablets, 768px and up) */
 
- @media ((min-width: 768px) and (max-width: 991px)) {
+ @media ((min-width: 768px) and (max-width: 991px)){
      /* Navigatio bar */
      #navbarNav {
          position: relative;
@@ -373,7 +373,7 @@
  }
 
  /* Small devices (landscape phones, 576px and up) */
- @media ((min-width: 576px) and (max-width: 767px)) {
+ @media ((min-width: 576px) and (max-width: 767px)){
      p {
          font-size: 13px;
          line-height: 18px;
@@ -627,7 +627,7 @@
  }
 
 
- @media ((min-width: 0px) and (max-width: 575px)) {
+ @media ((min-width: 0px) and (max-width: 575px)){
      p {
          font-size: 11px;
         line-height: 14px;
