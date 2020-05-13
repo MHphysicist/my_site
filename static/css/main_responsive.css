@@ -538,9 +538,33 @@
  @media ((min-width: 0px) and (max-width: 575px)) {
      p {
          font-size: 11px;
-         line-height: 15px;
+        line-height: 14px;
+        text-align: center;
+     }
+     
+     /* Navigation bar */
+     .navbar-brand {
+         margin-left: .9rem;
+     }
+     
+     /* content boxes */
+     .content-box-lg {
+         padding: 50px 0;
+     }
+     
+     .content-box-md {
+         padding: 50px 0;
+     }
+     
+     .content-box-sm {
+         padding: 50px 0;
      }
 
+     .btn-general {
+         padding: 5.7px 25px 5.7px 25px;
+         font-size: 10px;
+     }
+     
      /* buttons */
      .btn-general {
          font-size: 11px;
@@ -555,9 +579,9 @@
      }
 
      #home-text p {
-         font-size: 13px;
-         line-height: 18px;
-         margin: 8px 10px 8px 10px;
+         font-size: 11px;
+         line-height: 14px;
+         margin: 10px 10px 10px 10px;
      }
 
      /* Headings */
@@ -589,14 +613,20 @@
 
      /* skills section */
      .skill h4 {
-         font-size: 15px;
+         font-size: 13px;
+         top: 18px;
+         text-transform: uppercase;
 
+     }
+     
+     .progress {
+         height: 20px;
      }
 
      /* Statement section */
      #impress-statement h3 {
-         font-size: 15px;
-         line-height: 20px;
+         font-size: 13px;
+         line-height: 15px;
      }
 
      /* Services section */
@@ -632,7 +662,7 @@
      }
 
      .service-tab h3 {
-         font-size: 22px;
+         font-size: 20px;
          margin-bottom: 15px;
          margin-top: 0px;
      }
@@ -642,5 +672,125 @@
          margin-bottom: 15px;
 
      }
+     
+     #divicon-carousel div {
+         font-size: 30px;
+     }
+     
+     /* Portfolio section */
+     #portfolio .vertical-heading {
+         margin-bottom: 20px;
+     }
+     
+     #portofolio-wrapper {
+        padding-top: 15px;
+    }
+     /* Records section */
+     #records .horizontal-heading {
+        margin-bottom: 30px;
+    }
+     .records-item {
+         padding: 25px;
+         margin-bottom: 20px;
+     }
+     
+     .records-item i {
+         font-size: 35px;
+         color: #fff;
+     }
+     
+     .records-item h3 {
+         font-size: 22;
+         
+     }
+     
+     #records .content-box-sm {
+         padding-bottom: 30px;
+     }
+     
+     /* Blog Section */
+     .blog-left p {
+         margin: 0px 0 20px 0;
+     }
 
+     #blog-btn a {
+         position: relative;
+         left: 50%;
+         transform: translateX(-50%);
+     }
+
+     .blog-post {
+         margin-top: 20px;
+     }
+     
+     .blog-post h4 {
+         font-size: 20px;
+         text-align: center;
+     }
+
+     .blog-post > p {
+         font-size: 11px;
+        line-height: 14px;
+        text-align: justify;
+     }
+     
+     .blog-post a {
+         font-size: 11px;
+         margin-top: 10px;
+     }
+     
+     .blog-post .post-meta {
+         margin-top: 10px;
+     }
+     
+     .blog-post .post-meta p {
+         line-height: 14px;
+         text-align: left;
+     }
+     
+     #contact-left p {
+         margin: 0px 0 20px 0;
+     }
+     
+     #message-btn {
+         position: relative;
+         left: 50%;
+         transform: translateX(-25%);
+     }
+
+     .info h4 {
+         font-size: 20px;
+     }
+     
+     #contact-left ul.social-list li {
+        margin: 0 17px 0 17px;
+     }
+     
+     ul.info-details li {
+         font-family: "Open Sans", sans-serif;
+         font-size: 12px;
+         margin-top: 5px;
+         display: -webkit-inline-box;
+         display: -ms-inline-flexbox;
+         display: inline-flex;
+     }
+
+     ul.info-details li i {
+         font-size: 15px;
+         width: 25px;
+         margin-left: 10px;
+     }
+     
+     #contact-form h4 {
+        font-size: 20px;
+        text-align: center;
+    }
+     /* footer */
+     footer {
+        padding: 11px 0 11px 0;
+    }
+     
+     footer p {
+         margin-bottom: 0;
+     }
  }
