@@ -889,12 +889,6 @@ ul.navbar-nav > li > a {
     letter-spacing: 1.5px;
 }
 
-ul.navbar-nav > li > a:hover,
-ul.navbar-nav > li > a:focus {
-    background: none;
-    color: #ff0051;
-}
-
 /* navigation bar on scroll */
 .nav-on-scroll {
     background: rgb(12, 8, 25);
@@ -905,9 +899,11 @@ ul.navbar-nav > li > a:focus {
 
 ul.navbar-nav > li > a:hover,
 ul.navbar-nav > li > a:focus {
+    background: none;
     color: #04c2c9;
 }
 
-.nav-on-scroll ul.navbar-nav > li > a.active {
+.nav-on-scroll ul.navbar-nav > li > a.active,
+ul.navbar-nav > li > a.active {
     color: #ff0051;
 }
