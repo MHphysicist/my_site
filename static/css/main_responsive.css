@@ -186,7 +186,15 @@
      /* Navigatio bar */
      #navbarNav {
          position: relative;
-         left: 5.2%;
+         left: 2.8%;
+     }
+
+     ul.navbar-nav > li > a {
+         font-size: 13.3px;
+     }
+
+     .nav-on-scroll ul.navbar-nav > li > a.active {
+         font-size: 13.3px;
      }
 
      /* home section */
@@ -439,8 +447,9 @@
          margin-left: 50%;
          -webkit-transform: translateX(-50%);
          transform: translateX(-50%);
+         padding-top: 4%;
      }
-
+     
      #about-right p {
          margin-bottom: 15px;
      }
@@ -688,6 +697,11 @@
      #my-img-warpper {
         padding-top: 0%;
     }
+
+    #about-left .vertical-heading {
+        margin-bottom: 20px;
+    }
+    
      #about-right p {
          margin-bottom: 10px;
      }

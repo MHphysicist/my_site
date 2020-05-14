@@ -910,32 +910,4 @@ ul.navbar-nav > li > a:focus {
 
 .nav-on-scroll ul.navbar-nav > li > a.active {
     color: #ff0051;
-    font-weight: 500;
-        font-size: 15px;
-    font-weight: 600;
 }
-
-/*====================================
-           Mobile navigation menu
- ====================================*/
-
-
-/*====================================
-           All Content
- ====================================*/
-
-/*
-====================================
-           About
- ====================================
- .content-box-lg .row {
-     padding-bottom: 30px;
-}
-====================================
-           Personal Statement
-====================================
-
-#statement{
-    text-align: justify;
-}
-*/

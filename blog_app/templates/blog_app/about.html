@@ -76,7 +76,7 @@
             </div>
         </div>
     </div>
-    <a href="#about" id="home-caret-down" class="smooth-scroll"><i class="fa fa-caret-down"></i></a>
+    <a href="#about" id="home-caret-down" class="smooth-scroll animate__animated animate__fadeInDown"><i class="fa fa-caret-down"></i></a>
 
 </section>
 
@@ -93,23 +93,24 @@
                 <div class="row">
 
                     <!-- About Left Side -->
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-4">
 
-                        <div id="about-left" class="wow slideInLeft">
-                             <div class="vertical-heading">
+                        <div id="about-left">
+                            <div class="vertical-heading">
                                 <h5>Get to know me</h5>
                                 <h2><strong>Statement</strong><br>About me</h2>
+                                <div id="my-img-warpper" class="container">
+                                    <img id="me-img" src="{% static 'images/me1.JPG' %}" class="img-fluid" alt="">
+                                </div>
                             </div>
                         </div>
-                        <div id="my-img-warpper" class="col-lg-12">
-                            <img id="me-img" src="{% static 'images/me1.JPG' %}" class="img-fluid" alt="">
-                        </div>
+
                     </div>
 
                     <!-- About Right Side -->
                     <div class="col-lg-9 col-md-8">
 
-                        <div id="about-right" class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
+                        <div id="about-right">
                             <p>I had a passion for natural sciences since my childhood, but physics is my real passion. These words have become entrenched in my mind "physics is the rational description and the mathematical interpretation of nature, while the biggest significant goal of every physicist is to reach a real answer to the biggest significant question of physics; how does the universe work".</p>
                             <p>I graduated through the educational stages with distinction until I awarded my first class honours B.Sc degree in Physics. My interest in the Quantum Field Theory encouraged me to do my graduation project under the title of Compton Scattering in Quantum Electrodynamics. As I know how using computers can make progress in the scientific research that is impossible or very expensive without this usage, I have become interested in those fields that combine physics with computer science like Computational Physics, HPC, and Quantum Computing.</p>
                             <p>Also I have gone through multiple experiences related to group work from the problem solving groups to the graduation projects groups. So I have no doubt that teamwork is essential to speed up the progress of the scientific research.</p>
@@ -123,8 +124,9 @@
                 <!-- About Bottom -->
                 <div class="row">
                     <div class="col-lg-12">
+
                         <div id="about-bottom">
-                            <img style="animation-duration: 5s;" src="{% static 'images/after_statement.png' %}" alt="About Us" class="img-fluid">
+                            <img src="{% static 'images/after_statement.png' %}" alt="About Us" class="img-fluid">
                         </div>
 
                     </div>
@@ -146,8 +148,8 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="vertical-heading">
-                        <h5>What I learned</h5 >
-                        <h2>My <strong>Skills</strong> &<br><strong>knowledge</strong></h2 >
+                        <h5>What I learned</h5>
+                        <h2>My <strong>Skills</strong> &<br><strong>knowledge</strong></h2>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -438,6 +440,12 @@
     </div>
 </section>
 
+<section>
+    <div class="content-box-md">
+        empty yet
+    </div>
+</section>
+
 <!-- portfolio section -->
 <section id="portfolio">
     <div class="content-box-md">
@@ -449,7 +457,7 @@
                         <h2>Some of my <br>Finished <strong>Projects</strong></h2>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-12">
+                <div id="portfolio-p-wrapper" class="col-lg-7 col-md-12">
                     <p>I had a passion for natural sciences since my childhood, but physics is my real passion. These words have become entrenched in my mind "physics is the rational description and the mathematical interpretation of nature, while the biggest significant goal of every physicist is to reach a real answer to the biggest significant question of physics; how does the universe work" answer to the biggest significant question of physics; how does the universe work"answer to the biggest significant question to the biggest significant.</p>
                 </div>
             </div>
@@ -810,7 +818,11 @@
         </div>
     </div>
 </section>
-
+<section>
+    <div class="content-box-md">
+        empty yet
+    </div>
+</section>
 <!-- Contact section-->
 <section id="contact">
     <div class="content-box-lg">

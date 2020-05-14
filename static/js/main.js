@@ -46,7 +46,7 @@ $(function () {
         var section_id = $(this).attr("href");
 
         $("html, body").animate({
-            scrollTop: $(section_id).offset().top - 40
+            scrollTop: $(section_id).offset().top - 30
         }, 1250, "easeInOutExpo");
     })
 });
@@ -84,22 +84,115 @@ $(function () {
  });
 
  /* About section */
-/* $(function () {
-    $("#about-right").waypoint(
+ $(function () {
+
+    /* About section */
+    $("#about-left").waypoint(
         function () {
             $("#about-right p").each(function () {
                 $(this).addClass("animate__animated animate__slideInRight");
             });
-            $(".vertical-heading h2").addClass("animate__animated animate__fadeInDown");
-            $(".vertical-heading h5").addClass("animate__animated animate__zoomInLeft");
+            $("#about-left .vertical-heading h2").addClass("animate__animated animate__fadeInDown");
+            $("#about-left .vertical-heading h5").addClass("animate__animated animate__zoomInLeft");
             $("#my-img-warpper").addClass("animate__animated animate__zoomInUp");
         }, {
-            offset: 'top-to-bottom'
+            offset: '100%'
         }
-    )
-}); */
+    );
 
+    $("#about-bottom").waypoint(
+        function() {
+            $("#about-bottom img").addClass("animate__animated animate__fadeInUp");
+        },
+        {
+            offset: '100%'
+        }
+    );
 
+    /* skills section */
+    $('#skills').waypoint(
+        function() {
+            $("#skills p").addClass("animate__animated animate__slideInRight");
+            $("#skills .vertical-heading h2").addClass("animate__animated animate__fadeInDown");
+            $("#skills .vertical-heading h5").addClass("animate__animated animate__zoomInLeft");
+            $("#skills .skill").each(function(){
+                $(this).addClass("animate__animated animate__slideInUp animate__fadeInUp");
+            });
+        },
+        {
+            offset: '100%',
+        }
+    );
+
+    /* services section */
+    $("#services").waypoint(
+        function() {
+            $("#services .horizontal-heading h2").addClass("animate__animated animate__fadeInDown");
+            $("#services .horizontal-heading h5").addClass("animate__animated animate__tada");
+            $("#services .r-tabs-nav").addClass("animate__animated animate__zoomInUp");
+        },
+        {
+            offset: '100%'
+        }
+    );
+
+    /* Protfolio section */
+    $("#portfolio").waypoint(
+        function() {
+            $("#portfolio #portfolio-p-wrapper p").addClass("animate__animated animate__slideInRight");
+            $("#portfolio .vertical-heading h2").addClass("animate__animated animate__fadeInDown");
+            $("#portfolio .vertical-heading h5").addClass("animate__animated animate__zoomInLeft");
+            $("#portofolio-wrapper").addClass("animate__animated animate__fakeInUp")
+        },
+        {
+            offset: '100%'
+        }
+    );
+
+    /* records section */
+    $("#records").waypoint(
+        function() {
+            $("#records .horizontal-heading h2").addClass("animate__animated animate__fadeInDown");
+            $("#records .horizontal-heading h5").addClass("animate__animated animate__tada");
+            $("#records .records-item").each(function(){
+                    $(this).addClass("animate__animated animate__flip");
+            });
+        },
+        {
+            offset: '100%'
+        }
+    );
+
+    /* Blog section */
+    $("#blog").waypoint(
+        function() {
+            $("#blog .vertical-heading h2").addClass("animate__animated animate__fadeInDown");
+            $("#blog .vertical-heading h5").addClass("animate__animated animate__zoomInLeft");
+            $("#blog p").addClass("animate__animated animate__slideInUp");
+            $("#blog #blog-btn").addClass("animate__animated animate__rubberBand");
+            $("#blog .blog-post").addClass("animate__animated animate__backInRight");
+        },
+        {
+            offset: '100%'
+        }
+    );
+
+    /* contact section */
+    $("#contact").waypoint(
+        function() {
+            $("#contact .vertical-heading h2").addClass("animate__animated animate__fadeInDown");
+            $("#contact .vertical-heading h5").addClass("animate__animated animate__zoomInLeft");
+            $("#contact p").addClass("animate__animated animate__slideInUp");
+            $("#contact #contact-info h4").addClass("animate__animated animate__fadeIn");
+            $("#contact #contact-info ul.info-details").addClass("animate__animated animate__slideInRight");
+            $("#contact #contact-info ul.social-list").addClass("animate__animated animate__flash");
+            $("#contact form").addClass("animate__animated animate__bounceIn");
+        },
+        {
+            offset: '100%'
+        }
+    );
+});
  /*====================================
            Sills section
  ====================================*/
@@ -161,7 +254,7 @@ $(document).ready(function () {
 
 
 /*====================================
-           Work section
+           Portfolio section
  ====================================*/
 
 /*====================================
