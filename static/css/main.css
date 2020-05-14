@@ -131,7 +131,7 @@ section {
     display: inline-block;
 }
 
-#home-heading h1 span {
+#home-heading h1 span #corious-span {
     color: #ff0051;
     font-weight: 500;
 }
@@ -224,6 +224,7 @@ section {
     margin-left: -14px;
     z-index: 1;
     text-decoration: none;
+    animation-iteration-count: infinite;
 }
 
 #home-caret-down:hover,
@@ -312,16 +313,12 @@ section {
 }
 
 #my-img-warpper {
-    margin-top: 50px;
+    padding-top: 20%;
 }
 
 /* =========================================
                 About 01
 ============================================ */
-
-#about-right p:first-child {
-    margin-bottom: 30px;
-}
 
 #about-bottom {
     margin-top: 60px;
@@ -334,10 +331,6 @@ section {
 /*====================================
            Skills section
  ====================================*/
-#skills {
-    background-color: #;
-}
-
 .skill {
     margin: 0;
 }
@@ -486,10 +479,6 @@ section {
 /* =========================================
                 Portfolio
 ============================================ */
-
-#portfolio {
-}
-
 #portofolio-wrapper {
     padding-top: 35px;
 }
@@ -888,7 +877,7 @@ footer p {
 
 #navbarNav {
     position: relative;
-    left: 43.4%;
+    left: 37.8%;
 }
 
 ul.navbar-nav > li > a {
@@ -912,9 +901,6 @@ ul.navbar-nav > li > a:focus {
     padding: 0px 0;
     -webkit-box-shadow: 0 8px 6px -9px rgba(0, 0, 0, .8);
     box-shadow: 0 8px 6px -9px rgba(0, 0, 0, .8);
-}
-
-.nav-on-scroll ul.navbar-nav > li > a {
 }
 
 ul.navbar-nav > li > a:hover,

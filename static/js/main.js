@@ -73,6 +73,58 @@ $(function () {
     });
 
 });
+
+/*====================================
+           Animations
+ ====================================*/
+ $(window).on('load', function(){
+     $("#home-text p").addClass("animate__animated animate__bounce");
+     $("#home-btn").addClass("animate__animated animate__rubberBand");
+     $("#home-caret-down").addClass("animate__animated animate__fadeInDown");
+ });
+
+ /* About section */
+/* $(function () {
+    $("#about-right").waypoint(
+        function () {
+            $("#about-right p").each(function () {
+                $(this).addClass("animate__animated animate__slideInRight");
+            });
+            $(".vertical-heading h2").addClass("animate__animated animate__fadeInDown");
+            $(".vertical-heading h5").addClass("animate__animated animate__zoomInLeft");
+            $("#my-img-warpper").addClass("animate__animated animate__zoomInUp");
+        }, {
+            offset: 'top-to-bottom'
+        }
+    )
+}); */
+
+
+ /*====================================
+           Sills section
+ ====================================*/
+
+/*====================================
+           Progress Bars
+ ====================================*/
+
+ $(function () {
+
+    $("#skills").waypoint(
+        function () {
+            $(".progress-bar").each(function () {
+                $(this).animate({
+                    width: $(this).attr("aria-valuenow") + "%"
+                }, 500);
+            })
+            this.destroy();
+        },
+        {
+            offset: '50%'
+        }
+    )
+});
+
 /*====================================
            Services section
  ====================================*/
@@ -107,26 +159,6 @@ $(document).ready(function () {
 });
 
 
-/*====================================
-           Progress Bars
- ====================================*/
-
-$(function () {
-
-    $("#skills").waypoint(
-        function () {
-            $(".progress-bar").each(function () {
-                $(this).animate({
-                    width: $(this).attr("aria-valuenow") + "%"
-                }, 500);
-            })
-            this.destroy();
-        }, {
-            offset: '50%'
-        }
-    )
-});
-
 
 /*====================================
            Work section
@@ -156,3 +188,19 @@ $(function () {
         time: 2000,
     })
 });
+
+/*====================================
+           Typed text
+ ====================================*/
+ /* home section */
+ $(function(){
+    var typed = new Typed('#typed-home-heading', {
+        stringsElement: '#home-heading-1-text',
+        typeSpeed: 90,
+        backSpeed: 90,
+        smartBackspace: true,
+        loop: true,
+      });
+ });
+
+ 

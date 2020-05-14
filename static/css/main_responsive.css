@@ -86,12 +86,9 @@
 
 
  /* Extra large devices (large desktops, 1200px and up) */
-
- @media (min-width: 1200px){
-
-     /* Looks good */
-
- }
+@media (min-width: 1200) {
+    /* all good */
+}
 
  /* Large devices (desktops, 992px and up) */
 
@@ -99,7 +96,7 @@
      /* Navigation bar */
      #navbarNav {
          position: relative;
-         left: 31.4%;
+         left: 24.6%;
      }
 
      .vertical-heading h2,
@@ -189,15 +186,7 @@
      /* Navigatio bar */
      #navbarNav {
          position: relative;
-         left: 10%;
-     }
-
-     ul.navbar-nav > li > a {
-         font-size: 13.8px;
-     }
-
-     .nav-on-scroll ul.navbar-nav > li > a.active {
-         font-size: 13.8px;
+         left: 5.2%;
      }
 
      /* home section */
@@ -250,10 +239,6 @@
      /* about section */
      #me-img {
          width: 193px;
-     }
-
-     #about-right p:first-child {
-         margin-bottom: 1rem;
      }
 
      /* skills section */
@@ -699,6 +684,10 @@
          margin: 0 0 20px 0;
      }
 
+     /* about section */
+     #my-img-warpper {
+        padding-top: 0%;
+    }
      #about-right p {
          margin-bottom: 10px;
      }
