@@ -86,16 +86,16 @@
  /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200) {
     /* all good */
-    .card-columns {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-    }
 }
 
  /* Large devices (desktops, 992px and up) */
 
  @media (min-width: 992px) and (max-width: 1199px){
+    .card-columns {
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+    }
      /* Navigation bar */
      #navbarNav {
          position: relative;
@@ -900,3 +900,21 @@
          margin-bottom: 0;
      }
  }
+
+
+/* card coloumns */
+@media (min-width: 576px){
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px){
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}

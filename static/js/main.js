@@ -24,13 +24,13 @@ $(function () {
     function showHideNav() {
         if ($(window).scrollTop() > 50) {
             // show navbar bg
-            $("nav").addClass("nav-on-scroll");
+            $(".about-navbar").addClass("nav-on-scroll");
 
             // show back to top button
             $("#btn-back-to-top").removeClass("animate__fadeOut").addClass("animate__fadeIn");
         } else {
             // hide navbar bg
-            $("nav").removeClass("nav-on-scroll");
+            $(".about-navbar").removeClass("nav-on-scroll");
 
             // hide back to top button
             $("#btn-back-to-top").addClass("animate__fadeOut");
