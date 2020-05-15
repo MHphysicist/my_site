@@ -663,7 +663,7 @@ section {
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 1);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 1);
     border-radius: 5px;
-        -webkit-transition: all 200ms linear;
+    -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
