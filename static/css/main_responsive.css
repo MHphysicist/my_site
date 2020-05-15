@@ -791,6 +791,10 @@
      .records-item {
          padding: 25px;
          margin-bottom: 20px;
+         width: 70%;
+        position: relative;
+        left: 15%;
+        transform: translateX(-50%);
      }
      
      .records-item i {
