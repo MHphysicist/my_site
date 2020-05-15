@@ -60,7 +60,7 @@ $(function () {
     $("#mobile-nav-open-btn").click(function () {
         $("#mobile-nav").css("height", "100%");
         /* hide mobile nav triger bottun */
-        $("#mobile-nav-open-btn").css("display","none");
+        $("#mobile-nav-open-btn").css("opacity","0");
         $("#mobile-nav-close-btn").css("display","block");
     });
 
@@ -68,7 +68,7 @@ $(function () {
     $("#mobile-nav-close-btn, #mobile-nav a").click(function () {
         $("#mobile-nav").css("height", "0%");
         /* hide mobile nav trigger bottun */
-        $("#mobile-nav-open-btn").css("display","block");
+        $("#mobile-nav-open-btn").css("opacity","1");
         $("#mobile-nav-close-btn").css("display","none");
     });
 

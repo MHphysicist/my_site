@@ -9,9 +9,6 @@
     font-size: 40px;
     cursor: pointer;
     z-index: 2;
-    position: absolute;
-    right: 6%;
-    top: 6px;
     /* hide mobile nav open btn */
     display: none;
 }
@@ -35,9 +32,7 @@
     font-size: 54px;
     font-weight: 400;
     cursor: pointer;
-    position: absolute;
-    top: -8px;
-    right: 5.1%;
+    transform: translate3d(2.2%, -11%, 0);
     -webkit-transition: .3s;
     transition: .3s;
 }
@@ -96,12 +91,8 @@
         -moz-column-count: 5;
         column-count: 5;
     }
-     /* Navigation bar */
-     #navbarNav {
-         position: relative;
-         left: 24.6%;
-     }
 
+    /* v-h heading */
      .vertical-heading h2,
      .horizontal-heading h2 {
          font-size: 35px;
@@ -187,11 +178,6 @@
 
  @media (min-width: 768px) and (max-width: 991px){
      /* Navigatio bar */
-     #navbarNav {
-         position: relative;
-         left: 2.8%;
-     }
-
      ul.navbar-nav > li > a {
          font-size: 13.3px;
      }
@@ -902,7 +888,7 @@
  }
 
 
-/* card coloumns */
+/* card coloumns number modification */
 @media (min-width: 576px){
     .card-columns {
         -webkit-column-count: 2;
