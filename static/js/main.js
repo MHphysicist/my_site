@@ -46,7 +46,7 @@ $(function () {
         var section_id = $(this).attr("href");
 
         $("html, body").animate({
-            scrollTop: $(section_id).offset().top - 30
+            scrollTop: $(section_id).offset().top - 68
         }, 1250, "easeInOutExpo");
     })
 });
@@ -87,7 +87,7 @@ $(function () {
  $(function () {
 
     /* About section */
-    $("#about-left").waypoint(
+    $("#about-left .vertical-heading h2").waypoint(
         function () {
             $("#about-right p").each(function () {
                 $(this).addClass("animate__animated animate__slideInRight");
@@ -110,7 +110,7 @@ $(function () {
     );
 
     /* skills section */
-    $('#skills').waypoint(
+    $('#skills .vertical-heading h2').waypoint(
         function() {
             $("#skills p").addClass("animate__animated animate__slideInRight");
             $("#skills .vertical-heading h2").addClass("animate__animated animate__fadeInDown");
@@ -125,11 +125,12 @@ $(function () {
     );
 
     /* services section */
-    $("#services").waypoint(
+    $("#services .horizontal-heading h2").waypoint(
         function() {
             $("#services .horizontal-heading h2").addClass("animate__animated animate__fadeInDown");
             $("#services .horizontal-heading h5").addClass("animate__animated animate__tada");
             $("#services .r-tabs-nav").addClass("animate__animated animate__zoomInUp");
+            $("#services #service-tabs-wrapper").addClass("animate___animated animate__slideInUP");
         },
         {
             offset: '100%'
@@ -137,12 +138,12 @@ $(function () {
     );
 
     /* Protfolio section */
-    $("#portfolio").waypoint(
+    $("#portfolio .vertical-heading h2").waypoint(
         function() {
             $("#portfolio #portfolio-p-wrapper p").addClass("animate__animated animate__slideInRight");
             $("#portfolio .vertical-heading h2").addClass("animate__animated animate__fadeInDown");
             $("#portfolio .vertical-heading h5").addClass("animate__animated animate__zoomInLeft");
-            $("#portofolio-wrapper").addClass("animate__animated animate__fakeInUp")
+            $("#portofolio-wrapper").addClass("animate__animated animate__fadeInUp");
         },
         {
             offset: '100%'
@@ -150,7 +151,7 @@ $(function () {
     );
 
     /* records section */
-    $("#records").waypoint(
+    $("#records .horizontal-heading h2").waypoint(
         function() {
             $("#records .horizontal-heading h2").addClass("animate__animated animate__fadeInDown");
             $("#records .horizontal-heading h5").addClass("animate__animated animate__tada");
@@ -164,7 +165,7 @@ $(function () {
     );
 
     /* Blog section */
-    $("#blog").waypoint(
+    $("#blog .vertical-heading h2").waypoint(
         function() {
             $("#blog .vertical-heading h2").addClass("animate__animated animate__fadeInDown");
             $("#blog .vertical-heading h5").addClass("animate__animated animate__zoomInLeft");
@@ -178,7 +179,7 @@ $(function () {
     );
 
     /* contact section */
-    $("#contact").waypoint(
+    $("#contact p").waypoint(
         function() {
             $("#contact .vertical-heading h2").addClass("animate__animated animate__fadeInDown");
             $("#contact .vertical-heading h5").addClass("animate__animated animate__zoomInLeft");
