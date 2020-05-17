@@ -51,7 +51,11 @@
                   <p>Author: {{ post.author }}</p>
               </div>
               <div class="col-6">
+                {% if post.publish_date %}
                   <p class="text-right">On: {{ post.publish_date }}</p>
+                {% else %}
+                  <a class="btn btn-general" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+                {% endif %}
               </div>
           </div>
         </div>
@@ -73,9 +77,6 @@
             <div class="col-6">
                 <a class="btn btn-danger" href="{% url 'post_delete' pk=post.pk %}" style="color: #000;">Delete
                 </a>
-            </div>
-            <div class="col-6">
-              <a class="btn btn-success" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
             </div>
           {% endif %}
         </div>
