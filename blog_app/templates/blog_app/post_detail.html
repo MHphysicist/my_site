@@ -75,7 +75,7 @@
                 </a>
             </div>
             <div class="col-6">
-              <a href="{}"></a>
+              <a class="btn btn-success" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
             </div>
           {% endif %}
         </div>
@@ -88,7 +88,7 @@
     <div class="container">
         <a style="text-decoration: none;" class="btn-general btn-home" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
       <div id="comments-wrapper">
-        {% for comment in post.comments.all %}
+        {% for comment in post.comments.all reversed %}
         {% if user.is_authenticated %}
         <div id="comment-status">
           {% if not comment.approved_comment %}
