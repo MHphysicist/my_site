@@ -20,14 +20,14 @@ class ServiceRequest(models.Model):
 
     SERVICES_TYPES = [
         ('None', 'Select a service'),
-        ('Teach', 'Teaching (Secondary, University)'),  
-        ('Logo', 'Logo & graphics Design'),
-        ('Word', 'Document preparation (Word)'),
-        ('LaTex', 'Document preparation (LaTex)'),
-        ('Web_app', 'Web application (Django)'),
+        ('Teaching', 'Teaching (Secondary, University)'),  
+        ('Logo Design', 'Logo & graphics Design'),
+        ('Document preparation (Word)', 'Document preparation (Word)'),
+        ('Document preparation LaTex', 'Document preparation (LaTex)'),
+        ('Web application (Django)', 'Web application (Django)'),
     ]
     service_type = models.CharField(
-        max_length=7,
+        max_length=50,
         blank=False,
         choices=SERVICES_TYPES,
         default='None',

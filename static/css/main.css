@@ -1014,3 +1014,15 @@ ul.navbar-nav > li > a.active {
 /*-------------------------------------
         Navigation for blog posts list 
 ---------------------------------------*/
+/* navigation form */
+#postlist-nav form > * {
+    color: #fff;
+}
+#postlist-nav form .custom-select {
+    background-color: rgba(8.6, 5.9, 18.8, 1);
+}
+
+#postlist-nav form input {
+    background-color: rgba(8.6, 5.9, 18.8, 1);
+    color: #fff;
+}

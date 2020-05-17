@@ -28,11 +28,21 @@ class PostListView(ListView):
     model = models.Post
 
     def get_queryset(self):
-        query = self.request.GET.get('search_q')
-        posts_list = models.Post.objects.filter(
-            Q(title__icontains=query) | Q(text__icontains=query) 
-        )
-        return posts_list
+        search_query = self.request.GET.get('search_q')
+        select_query = self.request.GET.get('select_q')
+        
+        posts_list = models.Post.objects.filter(publish_date__lte=timezone.now()).order_by('-publish_date')
+        if search_query or select_query:
+            if select_query != 'none':
+                posts_list = posts_list.filter(Q(subject_type=select_query))
+            if search_query:
+                posts_list = posts_list.filter(
+                    Q(title__icontains=search_query) | Q(text__icontains=search_query)
+                    )
+            return posts_list
+        else:
+            return posts_list[:10]
+
     
 class PostDetailView(DetailView):
     model = models.Post

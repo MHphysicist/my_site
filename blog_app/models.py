@@ -5,8 +5,25 @@ from django.urls import reverse
 # Create your models here.
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING, blank=True)
+    
+    SUBJECTS_TYPES = [
+        ('None', 'select subject'),
+        ('Physics', 'Physics'),
+        ('Programming', 'Programming'),  
+        ('Django', 'Django'),
+        ('Learning', 'Learning'),
+        ('Tec talk', 'Tec talk'),
+        ('Personal', 'Personal'),
+    ]
+    subject_type = models.CharField(
+        max_length=50,
+        blank=False,
+        choices=SUBJECTS_TYPES,
+        default='None',
+    )
+
     title = models.CharField(max_length=500)
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='images/', blank=True)
     text = models.TextField()
     create_date = models.DateTimeField(default = timezone.now)
     publish_date = models.DateTimeField(blank=True, null=True)
