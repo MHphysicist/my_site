@@ -1,5 +1,136 @@
 {% extends "blog_app/base.html" %}
 {% block body_block %}
+<header>
+  <nav class="navbar fixed-top nav-on-scroll navbar-expand-md">
+      <div class="container">
+          <span id="mobile-nav-open-btn">&#9776;</span>
+          <a href="#" class="navbar-brand smooth-scroll">
+              {% load static %}
+              <img src="{% static 'images/logo/my-logo.png' %}" alt="logo">
+          </a>
+
+          <!-- menu -->
+          <div class="collapse navbar-collapse justify-content-end">
+              <form class="form-inline">
+
+                  <select class="custom-select">
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-general my-2 my-sm-0" type="submit">Search</button>
+
+              </form>
+          </div>
+
+          <div id="mobile-nav">
+              <!-- Mobile Menu Close Button -->
+              <span id="mobile-nav-close-btn">&times;</span>
+              <div id="mobile-nav-content">
+
+                  <select class="custom-select">
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+
+                  <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn-general my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                  
+              </div>
+          </div>
+      </div>
+
+  </nav>
+</header>
+
+<section id="blog-post-details">
+  <div class="content-box-lg">
+    <div class="container-fluid">
+      <div class="blog-post">
+
+        <div id="post-heading"><h1>{{ post.title }}</h1></div>
+
+        <div class="post-meta" style="margin: 20px 0;">
+          <div class="row">
+              <div class="col-6">
+                  <p>Author: {{ post.author }}</p>
+              </div>
+              <div class="col-6">
+                  <p class="text-right">On: {{ post.publish_date }}</p>
+              </div>
+          </div>
+        </div>
+
+        <div id="post-image">
+          <img src="{{ post.image.url }}" class="img-fluid col-1g-12 col-xl-6" style="float: left;" alt="Post Image">
+        </div>
+
+        <div class="post-text">
+          {{ post.text|safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="post-comments">
+  <div class="content-box-sm">
+    <div class="container">
+      <div class="">
+        <a style="text-decoration: none;" class="btn-general btn-home" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+      </div>
+      <div id="comments-wrapper">
+        {% for comment in post.comments.all %}
+        <div id="comment-status">
+          {% if not comment.approved_comment %}
+          <a class="btn btn-general" href="{% url 'comment_remove' pk=comment.pk %}">
+            <i class="fas fa-thumbs-down"></i>
+          </a>
+          </a>
+          <a class="btn btn-general" href="{% url 'comment_approve' pk=comment.pk %}">
+            <i class="fas fa-thumbs-up"></i>
+          </a>
+          {% endif %}
+        </div>
+        {% if user.is_authenticated or comment.approved_comment %}
+                <div class="post-comment col-12">
+                  <div class="comment-meta col-12">
+                    <div class="row">
+                      <div id="comment-author" class="col-6">
+                        <p>By: {{ comment.author}}</p>
+                      </div>
+                      <div id="comment-date" class="col-6">
+                        <p>{{ comment.create_date}}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="comment-text">
+                    <p>{{ comment.text|safe|linebreaks }}</p>
+                  </div>
+                </div>
+         {% endif %}
+         {% empty %}
+         <div class="post-comment col-12">
+          <p>No commetns</p>
+         </div>   
+       {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- back to top -->
+<a href="#top" id="btn-back-to-top" class="animate__animated btn btn-sm btn-service smooth-scroll d-none d-md-block d-lg-block d-xl-block" title="home" role="button">
+  <i class="fa fa-caret-square-up"></i>
+</a>
+
+
   <div class="jumbotron jumbo" >
         <div id="psot-details-card" class="card text-center">
                 <h4 class="card-header">{{ post.title }}</h4>

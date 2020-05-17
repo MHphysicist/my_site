@@ -15,9 +15,18 @@
 
             <!-- menu -->
             <div class="collapse navbar-collapse justify-content-end">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn-general my-2 my-sm-0" type="submit">Search</button>
+                <form class="form-inline" action="{% url 'post_list' %}">
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                        <option selected>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <div class="input-group">
+                        <input name="search_q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn-general my-2 my-sm-0" type="submit">Search</button>
+                    </div>
+
                 </form>
             </div>
 
@@ -25,17 +34,26 @@
                 <!-- Mobile Menu Close Button -->
                 <span id="mobile-nav-close-btn">&times;</span>
                 <div id="mobile-nav-content">
+
+                    <select class="custom-select">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+
                     <form class="form-inline">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn-general my-2 my-sm-0" type="submit">Search</button>
                     </form>
+                    
                 </div>
             </div>
         </div>
 
     </nav>
 </header>
-<section>
+<section id="posts-list">
     <div class="content-box-lg">
         <div class="container-fluid">
             <div class="card-columns">
@@ -46,7 +64,7 @@
                         <a href="{% url 'post_detail' pk=post.pk %}">
                             <img src="{{ post.image.url }}" class="img-fluid" alt="Post Image">
                         </a>
-                        <p>{{ post.text|txt_prev:"250" }}...</p>
+                        <p>{{ post.text|txt_prev:"250"|safe }}...</p>
                         <a href="{% url 'post_detail' pk=post.pk %}">Read more &#8827;</a>
                         <div class="post-meta">
                             <div class="row">
@@ -54,7 +72,7 @@
                                     <p>{{ post.author }}</p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="text-right">{{ post.publish_date.year }}, {{ post.publish_date.month }}, {{ post.publish_date.day }}</p>
+                                    <p class="text-right">{{ post.publish_date|date:"F" }}, {{ post.publish_date.day }}, {{ post.publish_date.year }}</p>
                                 </div>
                             </div>
                         </div>

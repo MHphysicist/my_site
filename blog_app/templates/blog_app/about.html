@@ -445,7 +445,7 @@
 <!-- portfolio section -->
 <section id="portfolio">
     <div class="content-box-sm">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-5 col-md-12">
                     <div class="vertical-heading">
@@ -458,7 +458,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="">
             <!-- portofolio wrapper -->
             <section id="portofolio-wrapper">
                 <div class="row no-gutters">
@@ -770,44 +770,27 @@
                 </div>
                 <div class="col-lg-7 col-md-12">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6">
+                        {% load blog_extras %}
+                        {% for post in latest_posts %}
+                        <div class="col-lg-6 col-md-6 blog-post-parent">
                             <!-- blog post -->
                             <div class="blog-post">
-                                <h4>Post title</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quo, cumque tempora, minus sint aliquam odio, placeat possimus sed numquam sapiente, eveniet. Debitis 
-                                </p>
-                                <a href="#">Read more ></a>
+                                <h4>{{ post.title|txt_prev:"24" }}...</h4>
+                                <p>{{ post.text|striptags|txt_prev:"170" }}...</p>
+                                <a href="{% url 'post_detail' pk=post.pk %}">Read more ></a>
                                 <div class="post-meta">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-3 col-sm-6 col-6">
-                                            <p>Author</p>
+                                            <p>{{post.author}}</p>
                                         </div>
                                         <div class="col-lg-6 col-md-9 col-sm-6 col-6">
-                                            <p class="text-right">Pusblish date</p>
+                                            <p class="text-right">{{ post.publish_date|date:"F" }}, {{ post.publish_date.day }}, {{ post.publish_date.year }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <!-- blog post -->
-                            <div class="blog-post">
-                                <h4>Post title</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quo, cumque tempora, minus sint aliquam odio, placeat possimus sed numquam sapiente, eveniet. Debitis
-                                </p>
-                                <a href="#">Read more ></a>
-                                <div class="post-meta">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-3 col-sm-6 col-6">
-                                            <p>Author</p>
-                                        </div>
-                                        <div class="col-lg-6 col-md-9 col-sm-6 col-6">
-                                            <p class="text-right">Pusblish date</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

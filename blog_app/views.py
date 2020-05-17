@@ -8,13 +8,18 @@ from django.views.generic.base import TemplateView #ListView, DetailView, Create
 from django.views.generic import  (ListView,
                                   DetailView,CreateView,
                                   UpdateView,DeleteView)
-
+from django.db.models import Q #for the PostListView query set 
 
 # Create your views here.
 class AboutView(CreateView):
     template_name = 'about.html'
     form_class = forms.MessageForm
     model = models.VisitorMessage
+
+    def get_context_data(self, **kwargs):
+        contx = super(AboutView, self).get_context_data(**kwargs)
+        contx['latest_posts'] = models.Post.objects.all()[:2]
+        return contx
     
     
     
@@ -23,7 +28,11 @@ class PostListView(ListView):
     model = models.Post
 
     def get_queryset(self):
-        return models.Post.objects.filter(publish_date__lte=timezone.now()).order_by('-publish_date')
+        query = self.request.GET.get('search_q')
+        posts_list = models.Post.objects.filter(
+            Q(title__icontains=query) | Q(text__icontains=query) 
+        )
+        return posts_list
     
 class PostDetailView(DetailView):
     model = models.Post
