@@ -1,25 +1,40 @@
 {% extends "blog_app/base.html" %}
 
 {% block body_block %}
-  <div class="jumbotron jumbo">
-      <h2>Please Login:</h2>
-      <h3>(Must be SuperUser, please check with the site admin)</h3>
-      {% if form.errors %}
-        <p>Your username and password didn't match! Please try again.</p>
-      {% endif %}
 
-      <form method="POST">
+<section id="log-in-section">
+  <div class="content-box-lg">
+    <div class="container">
+      <div id="contact-form">
+        <form method="POST">
           {% csrf_token %}
-          <div id="login-id" class="form-group">
-                {% load widget_tweaks %}
-                {% render_field form.username class="form-control" name="username" placeholder="username"%}
+          <h4>Please log in:</h4>
+          <h6>Only for the site SuperUsers, if not please don't use this form.</h6>
+          {% if form.errors %}
+          <script>
+            alert("If you are not a SuperUser this is a Warning.\nYou are not authorized to use this form.")
+          </script>
+          {% endif %}
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                  {% load widget_tweaks %}
+                  {% render_field form.username class="form-control input-field" name="username" placeholder="username"%}
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="form-group">
+                {% render_field form.password class="form-control" name="password" placeholder="password"%}
+              </div>
+            </div>
+            <div class="col-12">
+              <div id="message-btn">
+                <button type="submit" class="btn btn-general btn-blog">Login</button>
+            </div>
           </div>
-          <div id="login-id" class="form-group">
-              {% load widget_tweaks %}
-              {% render_field form.password class="form-control" name="password" placeholder="password"%}
-          </div>
-            <button type="submit" class="btn btn-primary btn-block" value="login">Login</button>
-            <input type="hidden" name="next" value="{{next}}">
-      </form>
+        </form>
+      </div>
+    </div>
   </div>
+</section>
 {% endblock body_block %}

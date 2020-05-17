@@ -23,7 +23,7 @@ class Post(models.Model):
     )
 
     title = models.CharField(max_length=500)
-    image = models.ImageField(upload_to='images/', blank=True)
+    image = models.ImageField(upload_to='images/')
     text = models.TextField()
     create_date = models.DateTimeField(default = timezone.now)
     publish_date = models.DateTimeField(blank=True, null=True)

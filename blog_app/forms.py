@@ -5,7 +5,7 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         managed = True
-        fields = ('author', 'title', 'image', 'text',)
+        fields = ('author', 'title', 'image', 'subject_type', 'text',)
 
         """
         widgets = {

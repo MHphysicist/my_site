@@ -445,7 +445,7 @@
 <!-- portfolio section -->
 <section id="portfolio">
     <div class="content-box-sm">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-12">
                     <div class="vertical-heading">
@@ -775,7 +775,7 @@
                         <div class="col-lg-6 col-md-6 blog-post-parent">
                             <!-- blog post -->
                             <div class="blog-post">
-                                <h4>{{ post.title|txt_prev:"24" }}...</h4>
+                                <h4>{{ post.title|txt_prev:"22" }}...</h4>
                                 <p>{{ post.text|striptags|txt_prev:"170" }}...</p>
                                 <a href="{% url 'post_detail' pk=post.pk %}">Read more ></a>
                                 <div class="post-meta">

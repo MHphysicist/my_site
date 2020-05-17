@@ -788,7 +788,11 @@ section {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 1);
     border-radius: 5px;
 }
-
+#blog-post-details .blog-post .btn-danger {
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+}
 #blog-post-details .blog-post:hover,
 #blog-post-details .blog-post:focus{
     transform: none;
@@ -800,6 +804,28 @@ section {
     margin-top: 0px;
     padding: 10px;
 }
+/*..................................
+           Post form
+..................................*/
+
+#post-form-section {
+    min-height: 100%;
+}
+#contact-form form .form-group .custom-select {
+    background-color: rgba(8.6, 5.9, 18.8, 1);
+    font-size: 12px;
+}
+
+
+#contact-form form .form-group .custom-file {    
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+}
+
+#contact-form form .form-group .custom-file .custom-file-label {
+    background-color: rgba(8.6, 5.9, 18.8, 1);
+}
+
 
 /*..................................
              Post comment
@@ -831,6 +857,14 @@ section {
     text-align: justify;
 }
 
+/*.....................................
+.......................................
+           Post comment form
+.......................................
+.....................................*/
+#comment-form {
+    min-height: 100%;
+}
 /* =========================================
                 Contact section
 ============================================ */
@@ -927,6 +961,10 @@ ul.social-list li:nth-child(7) a:hover {
     background: #0088cc;
     border-color: transparent;
 }
+
+/*---------------------------
+       The contact form
+---------------------------*/
 #contact-form {
     background-color: rgb(12, 8, 25);
     padding: 20px;
@@ -1044,4 +1082,28 @@ ul.navbar-nav > li > a.active {
 #postlist-nav form button:hover {
     background-color: #04c2c9;
     border-color: #04c2c9;
+}
+
+/*=================================
+===================================
+    New request form section
+===================================
+=================================*/
+#request-form-section {
+    min-height: 100%;
+}
+
+/*=================================
+===================================
+    Log in form section
+===================================
+=================================*/
+#log-in-section {
+    min-height: 100%;
+}
+#log-in-section #contact-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
 }

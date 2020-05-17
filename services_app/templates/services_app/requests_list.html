@@ -1,22 +1,24 @@
 {% extends "blog_app/base.html" %}
 {% block body_block %}
-  <div style="background-color: white;" class="jumbo">
+
+  <div style="background-color: white; min-height: 100%;">
     <div class="table-responsive">
       <table class="table table-bordered">
         <thead class="thead-dark">
           <tr>
             <th>Visitor name</th>
+            <th>Request date</th>
             <th>View details</th>
           </tr>
         </thead>
         {% for servicerequest in servicerequest_list reversed %}
         <tr>
           <th>{{ servicerequest.visitor_name }}</th>
+          <th>{{ servicerequest.request_date }}</th>
           <th><a class="btn btn-info" href="{% url 'services:request_details' pk=servicerequest.pk %}">Details</a></th>
         </tr>
         {% endfor %}
       </table>
     </div>
   </div>
-  <br>
 {% endblock body_block %}

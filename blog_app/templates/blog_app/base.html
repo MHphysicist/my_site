@@ -55,9 +55,10 @@
     <div id="overlayer">
     </div>
 
-    <!-- Navbar -->
-    <!--    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" id="brand-id" href="{% url 'about' %}"><img id="logo-id" src="{% static 'images/logos.png' %}"></a>
+    <!-- Navbar -->    <nav class="navbar fixed-bottom navbar-expand-lg">
+        <a class="navbar-brand" id="brand-id" href="{% url 'about' %}">
+            <img id="logo-id" src="{% static 'images/logo/my-logo.png' %}">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -97,7 +98,7 @@
             </ul>
         </div>
     </nav>
--->
+
     <!-- Content -->
     {% block body_block %}
 

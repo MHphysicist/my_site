@@ -1,55 +1,34 @@
 {% extends "blog_app/base.html" %}
 {% block body_block %}
+{% load static %}
 <header>
   <nav class="navbar fixed-top nav-on-scroll navbar-expand-md">
       <div class="container">
           <span id="mobile-nav-open-btn">&#9776;</span>
-          <a href="#" class="navbar-brand smooth-scroll">
-              {% load static %}
+          <a href="{% url 'about' %}" class="navbar-brand">
               <img src="{% static 'images/logo/my-logo.png' %}" alt="logo">
           </a>
 
           <!-- menu -->
           <div class="collapse navbar-collapse justify-content-end">
-              <form class="form-inline">
-
-                  <select class="custom-select">
-                      <option selected>Open this select menu</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn-general my-2 my-sm-0" type="submit">Search</button>
-
-              </form>
+            <ul class="nav navbar-nav">
+              <li><a href="{% url 'post_list' %}" class="nav-link">Blog</a></li>
+              <li><a href="{% url 'services:services' %}" class="nav-link">Services</a></li>
+          </ul>
           </div>
 
           <div id="mobile-nav">
               <!-- Mobile Menu Close Button -->
               <span id="mobile-nav-close-btn">&times;</span>
               <div id="mobile-nav-content">
-
-                  <select class="custom-select">
-                      <option selected>Open this select menu</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-
-                  <form class="form-inline">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn-general my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-                  
+                
               </div>
           </div>
       </div>
 
   </nav>
 </header>
-
+<span id="top"></span>
 <section id="blog-post-details">
   <div class="content-box-lg">
     <div class="container-fluid">
@@ -75,17 +54,28 @@
         <div class="post-text">
           {{ post.text|safe }}
         </div>
+        <div class="row">
+          {% if user.is_authenticated %}
+              <div class="col-6">
+                <a class="btn btn-warning" href="{% url 'post_update' pk=post.pk %}" style="color: #000;">
+                  Update
+                </a>
+              </div>
+            <div class="col-6">
+                <a class="btn btn-danger" href="{% url 'post_delete' pk=post.pk %}" style="color: #000;">Delete
+                </a>
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 <section id="post-comments">
   <div class="content-box-sm">
     <div class="container">
-      <div class="">
         <a style="text-decoration: none;" class="btn-general btn-home" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
-      </div>
+      
       <div id="comments-wrapper">
         {% for comment in post.comments.all %}
         <div id="comment-status">
@@ -129,57 +119,4 @@
 <a href="#top" id="btn-back-to-top" class="animate__animated btn btn-sm btn-service smooth-scroll d-none d-md-block d-lg-block d-xl-block" title="home" role="button">
   <i class="fa fa-caret-square-up"></i>
 </a>
-
-
-  <div class="jumbotron jumbo" >
-        <div id="psot-details-card" class="card text-center">
-                <h4 class="card-header">{{ post.title }}</h4>
-                <img src="{{ post.image.url }}" class="card-img" alt="post image">
-                {% if post.publish_date %}
-                <h6 class="card-footer" style="margin: 0">On: {{ post.publish_date }}</h6>
-                {% else %}
-                    <a class="btn btn-primary" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
-                {% endif %}
-        </div>
-        <br>
-        <div class="container" style="text-align: center"><p>{{ post.text|safe|linebreaksbr}}</p></div>
-  </div>
-  {% if user.is_authenticated %}
-  <div class=" container jumbo row" style="margin: 0; padding: 0;">
-      <div class="col-6">
-        <a class="btn btn-warning btn-block" href="{% url 'post_update' pk=post.pk %}" style="color:white;">Update
-        </a>
-      </div>
-    <div class="col-6">
-        <a class="btn btn-danger btn-block" href="{% url 'post_delete' pk=post.pk %}" >Delete
-        </a>
-    </div>
-  </div>
-  {% endif %}
- 
-  <hr style="height: .05px; color: black; background: black;">
-   <div class="jumbotron container jumbo" style="margin-top: 30px;">
-       <a class="btn btn-primary btn-block btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
-       <div container>
-       {% for comment in post.comments.all %}
-        <br>
-        {% if user.is_authenticated or comment.approved_comment %}
-            {{ comment.create_date}}
-                {% if not comment.approved_comment %}
-                <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}">
-                    <span class="fas fa-thumbs-down"></span>
-                </a>
-                <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}">
-                        <span class="fas fa-thumbs-up"></span>
-                </a>
-                {% endif %}
-
-                <p>{{ comment.text|safe|linebreaks}}</p>
-                <p>Posted By: {{ comment.author}}</p>
-         {% endif %}
-         {% empty %}
-         <p>No commetns</p>   
-       {% endfor %}
-        </div>
-   </div>
 {% endblock body_block %}
