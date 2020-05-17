@@ -14,8 +14,8 @@ class ServicesListView(TemplateView):
 class RequestCreateView(CreateView):
     form_class = forms.RequestForm
     model = models.ServiceRequest
-
     template_name = 'services_app/request_form.html'
+    redirect_field_name = 'about'
 
 class RequstsListView(ListView):
     model = models.ServiceRequest

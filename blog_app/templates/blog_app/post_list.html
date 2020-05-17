@@ -1,5 +1,6 @@
 {% extends "blog_app/base.html" %}
 {% block body_block %}
+{% load static %}
 {% load blog_extras %}
 
 <span id="top"></span>
@@ -9,7 +10,6 @@
         <div class="container">
             <span id="mobile-nav-open-btn">&#9776;</span>
             <a href="#" class="navbar-brand smooth-scroll">
-                {% load static %}
                 <img src="{% static 'images/logo/my-logo.png' %}" alt="logo">
             </a>
 
