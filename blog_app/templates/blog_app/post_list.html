@@ -25,10 +25,8 @@
                         <option value="Tec talk">Tec talk</option>
                         <option value="Personal">Personal</option>
                     </select>
-                    <div class="input-group">
-                        <input name="search_q" class="form-control input-field" type="search" placeholder="Search" aria-label="Search">
-                    </div>
-                    <button class="btn btn-general my-2 my-sm-0" type="submit">Search</button>
+                    <input name="search_q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
 
@@ -46,10 +44,8 @@
                             <option value="Tec talk">Tec talk</option>
                             <option value="Personal">Personal</option>
                         </select>
-                        <div class="input-group">
-                            <input name="search_q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        </div>
-                        <button class="btn-general my-2 my-sm-0" type="submit">Submit</button>
+                        <input name="search_q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
             </div>
@@ -81,6 +77,14 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                {% empty %}
+                <div id="not-found-msg" class="text-center">
+                    
+                    <i style="font-size: 50px;" class="fa fa-meh"></i>
+                    <br>
+                    
+                    <p>No match found..!</p>
                 </div>
                 {% endfor %}
             
