@@ -17,6 +17,12 @@
               <li style="font-size: 25px;"> | </li>
               <li><a href="#blog-post-details" class="nav-link smooth-scroll">Post</a></li>
               <li><a href="#post-comments" class="nav-link smooth-scroll">Comments</a></li>
+              
+              {% if user.is_authenticated %}
+              <li style="font-size: 25px;"> | </li>
+              <li><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+              {% endif %}
+                
           </ul>
           </div>
 

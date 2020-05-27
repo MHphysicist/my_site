@@ -28,6 +28,14 @@
                     <input name="search_q" class="form-control mr-sm-2" type="search" placeholder="Search text goes here" aria-label="Search">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
+                <ul class="nav navbar-nav">
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'post_new' %}" class="nav-link">New</a></li>
+                        <li><a href="{% url 'draft_list' %}" class="nav-link">Drafts</a></li>
+                        <li style="font-size: 25px;"> | </li>
+                        <li><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+                    {% endif %}
+                </ul>
             </div>
 
             <div id="mobile-nav">
