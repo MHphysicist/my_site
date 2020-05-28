@@ -9,13 +9,15 @@
     font-family: cursive;
     font-weight: 800;
 }
- #services-cards div div i {
+#services-cards div div i {
     font-size: 60px;
-    color: black;
+    color: #fff;
 }
 
 #service-card-id {
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    background-color: rgba(8.6, 5.9, 18.8, 1);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 1);
     padding: 20;
 }
 
@@ -30,18 +32,21 @@
 
 /* hover event */
 #service-card-id:hover{
-    border-color: purple;
+    border-color: rgb(12, 8, 25);
+    transform: scale(1.05);
+    overflow: hidden;
 }
-#service-card-id div:hover {
-    background-color: purple;
+
+#service-card-id:hover div {
+    background-color: rgb(15, 10, 30);
 }
 
 #service-card-id:hover h5 {
-    font-size: 150%;
-    color: gold;
+    font-size: 120%;
+    color: #f4c613;
 }
 #service-card-id:hover i {
-    color:#03fc84;
+    color:#04c2c9;
     transform: rotate3d(0, 1, 0, 40deg);
 }
 
@@ -51,7 +56,7 @@
 
 #service-card-id:hover hr {
     width: 100%;
-    background-color: black;
+    background-color: #fff;
 }
 
 #service-card-id div,
@@ -68,19 +73,6 @@
 /*====================================
            Request service button
  ====================================*/
-#request-button {
-    background-color: rgba(247, 174, 102, 1);
-    color: black;
-    font-size: large;
-    border-color: rgba(247, 174, 102, 1);
-    border-radius: 0%;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10020;
-}
 
 /*====================================
            Request service form
@@ -91,4 +83,47 @@
 
 #submit-request-button {
     align-self: center;
+}
+/*====================================
+
+           Responsive behaviour
+ ====================================*/
+
+@media (min-width: 768px) and (max-width: 1199px){
+    #services div.content-box-md {
+        padding: 86px 0 10px 0;
+    }
+
+    #services-cards div div i {
+        font-size: 50px;
+    }
+    
+    #services-cards h5 {
+        font-size: 1.1rem;
+    }
+
+    #services-cards p {
+        line-height: 20px;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 767px){
+    #services div.content-box-md {
+        padding: 86px 0 10px 0;
+    }
+
+    #services-cards div div i {
+        font-size: 45px;
+    }
+
+    #services-cards h5 {
+        font-size: 1rem;
+    }
+
+    #services-cards p {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
 }

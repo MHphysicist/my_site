@@ -4,79 +4,124 @@
 <!-- Special for the services app -->
 <link rel="stylesheet" href="{% static 'css/services_app.css' %}">
 
-<a href="{% url 'services:request_new' %}"  id="request-button" class="btn">Request a service</a>
+<header>
+    <nav id="postlist-nav" class="navbar fixed-top nav-on-scroll navbar-expand-md">
+        <div class="container">
+            <span id="mobile-nav-open-btn">&#9776;</span>
+            <a href="{% url 'about' %}" class="navbar-brand">
+                <img src="{% static 'images/logo/my-logo.png' %}" alt="logo">
+            </a>
+  
+            <!-- menu -->
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'post_list' %}" class="nav-link">Blog</a></li>
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'draft_list' %}" class="nav-link">Drafts</a></li>
+                        <li style="font-size: 25px;"> | </li>
+                        <li><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+                        {% endif %}
+                </ul>
+            </div>
+  
+            <div id="mobile-nav">
+                <!-- Mobile Menu Close Button -->
+                <span id="mobile-nav-close-btn">&times;</span>
+                <div id="mobile-nav-content">
+                  <ul class="nav navbar-nav">
+                    <li><a href="{% url 'post_list' %}" class="nav-link">Blog</a></li>
+                        
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'draft_list' %}" class="nav-link">Drafts</a></li>
+                        <li style="font-size: 25px;">-------------</li>
+                        <li><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+                        {% endif %}
+                </ul>
+                </div>
+            </div>
+        </div>
+  
+    </nav>
+  </header>
 
-<div id="services-cards" class="card-columns">
-    <div id="service-card-id" class="card" data-aos="flip-right">
-        <div class="card-body text-center">
-            <i class='fas fa-code'></i>
-            <hr>
-            <h5 class="card-title">Web Development</h5>
-            <hr>
-            <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<section id="services">
+    <div class="content-box-md">
+        <div class="container">
+            <div class="col-12">
+                <div id="services-cards" class="card-columns">
+                    <div id="service-card-id" class="card" data-aos="flip-right">
+                        <div class="card-body text-center">
+                            <i class='fas fa-code'></i>
+                            <hr>
+                            <h5 class="card-title">Web Development</h5>
+                            <hr>
+                            <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                        <a href="{% url 'services:request_new' %}" class="btn btn-general btn-blog">Request</a>
+                        </div>
+                    </div>
+                
+                    <div id="service-card-id" class="card" data-aos="flip-left">
+                        <div class="card-body text-center">
+                            <i class='far fa-file-word'></i>
+                            <hr>
+                            <h5 class="card-title">Word Processing</h5>
+                            <hr>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <a href="{% url 'services:request_new' %}" class="btn btn-general btn-blog">Request</a>
+                        </div>
+                    </div>
+                
+                    <div id="service-card-id" class="card" data-aos="flip-right">
+                        <div class="card-body text-center">
+                            <i class='fas fa-chalkboard-teacher'></i>
+                            <hr>
+                            <h5 class="card-title">Teaching</h5>
+                            <hr>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <a href="{% url 'services:request_new' %}" class="btn btn-general btn-blog">Request</a>
+                        </div>
+                    </div>
+
+                    <div id="service-card-id" class="card" data-aos="flip-right">
+                        <div class="card-body text-center">
+                            <i class='fas fa-code'></i>
+                            <hr>
+                            <h5 class="card-title">Web Development</h5>
+                            <hr>
+                            <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <a href="{% url 'services:request_new' %}" class="btn btn-general btn-blog">Request</a>
+                        </div>
+                    </div>
+
+                    <div id="service-card-id" class="card" data-aos="flip-right">
+                        <div class="card-body text-center">
+                            <i class='fas fa-code'></i>
+                            <hr>
+                            <h5 class="card-title">Web Development</h5>
+                            <hr>
+                            <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <a href="{% url 'services:request_new' %}" class="btn btn-general btn-blog">Request</a>
+                        </div>
+                    </div>
+
+                    <div id="service-card-id" class="card" data-aos="flip-right">
+                        <div class="card-body text-center">
+                            <i class='fas fa-code'></i>
+                            <hr>
+                            <h5 class="card-title">Web Development</h5>
+                            <hr>
+                            <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <a href="{% url 'services:request_new' %}" class="btn btn-general btn-blog">Request</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div id="service-card-id" class="card" data-aos="flip-left">
-        <div class="card-body text-center">
-            <i class='far fa-file-word'></i>
-            <hr>
-            <h5 class="card-title">Word Processing</h5>
-            <hr>
-            <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-        </div>
-    </div>
-
-    <div id="service-card-id" class="card" data-aos="flip-right">
-        <div class="card-body text-center">
-            <i class='fas fa-chalkboard-teacher'></i>
-            <hr>
-            <h5 class="card-title">Teaching</h5>
-            <hr>
-            <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-        </div>
-    </div>
-
-    <div id="service-card-id" class="card" data-aos="flip-left">
-        <div class="card-body text-center">
-            <i class='fas fa-code'></i>
-            <hr>
-            <h5 class="card-title">Web Development</h5>
-            <hr>
-            <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-        </div>
-    </div>
-
-    <div id="service-card-id" class="card" data-aos="flip-right">
-        <div class="card-body text-center">
-            <i class='far fa-file-word'></i>
-            <hr>
-            <h5 class="card-title">Word Processing</h5>
-            <hr>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-            </p>
-        </div>
-    </div>
-
-    <div id="service-card-id" class="card" data-aos="flip-left">
-        <div class="card-body text-center">
-            <i class='fas fa-chalkboard-teacher'></i>
-            <hr>
-            <h5 class="card-title">Teaching</h5>
-            <hr>
-            <p class="card-text">
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-        </div>
-    </div>
-</div>
-<br><br>
+</section>
 {% endblock body_block %}
