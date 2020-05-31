@@ -195,7 +195,9 @@ $(function () {
     );
 });
 
-/* Blog views */
+/*-------------------------------
+            Blog views
+-------------------------------*/
 /* Posts list */
 $(window).on('load', function(){
     $(".post-card-wrapper").each(
@@ -214,7 +216,7 @@ $(window).on('load', function(){
         }
     );
 });
-
+/* Post details */
 $(window).on('load', function(){
     $("#blog-post-details .blog-post").waypoint(
         function(){
@@ -250,6 +252,45 @@ $(function(){
            );
         });
 });
+
+/*-------------------------------
+       Services view animations 
+-------------------------------*/
+$(window).on('load', function(){
+    $('#services #services-cards .card-l').each(function(){
+        $(this).waypoint(
+            function(){
+                $(this.element).addClass("animate__animated animate__lightSpeedInLeft");
+            },
+            {
+                offset: '100%'
+            }
+        );
+    });
+
+    $('#services #services-cards .card-m').each(function(){
+        $(this).waypoint(
+            function(){
+                $(this.element).addClass("animate__animated animate__zoomInUp");
+            },
+            {
+                offset: '100%'
+            }
+        );
+    });
+
+    $('#services #services-cards .card-r').each(function(){
+        $(this).waypoint(
+            function(){
+                $(this.element).addClass("animate__animated animate__lightSpeedInRight");
+            },
+            {
+                offset: '100%'
+            }
+        );
+    });
+});
+
 /*-------------------------------
        Service request form animation 
 -------------------------------*/
