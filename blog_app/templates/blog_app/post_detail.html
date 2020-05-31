@@ -93,7 +93,9 @@
 <section id="post-comments">
   <div class="content-box-sm">
     <div class="container">
+      <div style="width: max-content;" id="add-comment-btn">
         <a style="text-decoration: none;" class="btn-general btn-home" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+      </div>
       <div id="comments-wrapper">
         {% for comment in post.comments.all reversed %}
         {% if user.is_authenticated %}

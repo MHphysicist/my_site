@@ -36,7 +36,7 @@
     font-size: 54px;
     font-weight: 400;
     cursor: pointer;
-    transform: translate3d(2.2%, -11%, 0);
+    transform: translate3d(25%, -10%, 0);;
     -webkit-transition: .3s;
     transition: .3s;
 }
@@ -373,6 +373,18 @@
         padding-top: 87px;
     }
 
+    /*=======================================
+    Comment form view
+=======================================*/
+#comment-form .content-box-lg {
+    padding-top: 100px;
+}
+/*=======================================
+Request form view
+=======================================*/
+#request-form-section .content-box-md {
+    padding-top: 100px;
+}
 }
 
  /* Small devices (landscape phones, 576px and up) */
@@ -386,6 +398,10 @@
      /* Navbar */
      .navbar {
         padding: 0px 0 0px 0;
+    }
+
+    #mobile-nav-close-btn {
+        transform: translate3d(65%, -10%, 0);
     }
      /* mobile navigation */
      #mobile-nav-open-btn {
@@ -635,6 +651,18 @@
         padding-top: 60px;
     }
 
+/*=======================================
+    Comment form view
+=======================================*/
+    #comment-form .content-box-lg {
+        padding-top: 100px;
+    }
+/*=======================================
+    Request form view
+=======================================*/
+    #request-form-section .content-box-md {
+        padding-top: 100px;
+    }
 }
 
 
@@ -925,6 +953,19 @@
     #posts-list .content-box-lg {
         padding-top: 70px;
     }
+
+    /*=======================================
+    Comment form view
+=======================================*/
+#comment-form .content-box-lg {
+    padding-top: 90px;
+}
+/*=======================================
+Request form view
+=======================================*/
+#request-form-section .content-box-md {
+    padding-top: 90px;
+}
  }
 
 
@@ -935,6 +976,7 @@
         -moz-column-count: 2;
         column-count: 2;
     }
+    
 }
 
 @media (min-width: 992px){

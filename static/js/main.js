@@ -194,6 +194,74 @@ $(function () {
         }
     );
 });
+
+/* Blog views */
+/* Posts list */
+$(window).on('load', function(){
+    $(".post-card-wrapper").each(
+        function(){
+            $(this).waypoint(
+                function() {
+                    /*var a = $(this.element).attr('postpk');*/
+                    
+                        $(this.element).addClass("animate__animated animate__backInUp");
+                    
+                },
+                {
+                    offset: '100%'
+                }
+            );
+        }
+    );
+});
+
+$(window).on('load', function(){
+    $("#blog-post-details .blog-post").waypoint(
+        function(){
+            $(".blog-post").addClass("animate__animated animate__fadeInUpBig");
+        },
+        {
+            offset: '100%'
+        }
+    );
+});
+
+$(function(){
+    /* Add comment button */
+    $("#add-comment-btn").waypoint(
+        function(){
+            $("#add-comment-btn").addClass("animate__animated animate__rubberBand");
+        },
+        {
+            offset: '100%'
+        }
+    );
+
+    /* Post comments */
+    $("#post-comments #comments-wrapper .post-comment").each(
+        function(){
+           $(this).waypoint(
+               function(){
+                   $(this.element).addClass("animate__animated animate__flipInX")
+               },
+               {
+                   offset: '100%'
+               }
+           );
+        });
+});
+/*-------------------------------
+       Service request form animation 
+-------------------------------*/
+$(window).on('load', function() {
+    $('#request-form-section #contact-form').addClass("animate__animated animate__flipInY");
+});
+/*-------------------------------
+       Comment form animation 
+-------------------------------*/
+$(window).on('load', function() {
+    $('#comment-form #contact-form').addClass("animate__animated animate__flipInY");
+});
  /*====================================
            Sills section
  ====================================*/

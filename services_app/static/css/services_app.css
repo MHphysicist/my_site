@@ -33,7 +33,7 @@
 /* hover event */
 #service-card-id:hover{
     border-color: rgb(12, 8, 25);
-    transform: scale(1.05);
+    transform: scale(1.02);
     overflow: hidden;
 }
 
